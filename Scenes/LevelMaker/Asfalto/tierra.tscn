@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcvg84xoeood2"]
+
+[ext_resource type="Script" path="res://Scripts/Tierra.gd" id="1_nkahj"]
+
+[node name="Tierra" type="Area2D"]
+script = ExtResource("1_nkahj")
+
+[node name="Tierra" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1253, -201, -1249, 199, -1495, 185, -1878, 23, -1862, 1421, -1525, 1273, -1305, 1224, -955, 1300, -627, 1421, -470, 1610, -470, 2014, -479, 2432, -484, 3065, -933, 3065, -924, 2050, -906, 1789, -1301, 1668, -1687, 1861, -1965, 1969, -2163, 1888, -2302, 1664, -2315, 45, -2257, -321, -2113, -491, -1871, -500)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

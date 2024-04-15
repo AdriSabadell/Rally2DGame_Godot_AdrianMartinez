@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cohwtdren1qo0"]
+
+[ext_resource type="Texture2D" uid="uid://dldsqb22rl5qb" path="res://Sprite/Tramos/Recta.png" id="1_tsktx"]
+[ext_resource type="Script" path="res://Scripts/Asfalto.gd" id="1_uqsgj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ou4vv"]
+size = Vector2(249, 900)
+
+[node name="Recta" type="Area2D" groups=["Asfalto"]]
+show_behind_parent = true
+rotation = 1.57079
+script = ExtResource("1_uqsgj")
+
+[node name="Recta" type="Sprite2D" parent="."]
+show_behind_parent = true
+rotation = 1.5708
+texture = ExtResource("1_tsktx")
+
+[node name="Hierba" type="CollisionShape2D" parent="."]
+position = Vector2(-0.00299406, 390.6)
+rotation = 1.5708
+scale = Vector2(1.2, 1.2)
+shape = SubResource("RectangleShape2D_ou4vv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-574.999, -199.004, 569.001, -198.996, 542.004, -587.997, -583.996, -564.004)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
