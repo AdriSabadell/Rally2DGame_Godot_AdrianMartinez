@@ -7,7 +7,7 @@
 radius = 3.0
 height = 8.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
+[node name="Coche" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_be3sm")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
