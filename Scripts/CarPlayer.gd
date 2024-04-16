@@ -16,7 +16,7 @@ var acceleration = Vector2.ZERO
 var steer_direction
 
 func _process(delta):
-	#print(velocity)
+	#print(velocity.length())
 	pass
 
 func _physics_process(delta):
@@ -94,6 +94,10 @@ func hierba():
 	traction_slow = 4
 
 func choque():
-	print("Choque")
+	#print("Choque")
+	print(velocity.length())
+	if velocity.length() > 400:
+		print("Daños grabes")
+	
 	
 	
