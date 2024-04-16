@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dt3qe1yrdps7m" path="res://Scenes/LevelMaker/Elementos Fuera/Roca.tscn" id="10_pr3ht"]
 [ext_resource type="Texture2D" uid="uid://di2hhlb5xjjrx" path="res://Sprite/Tramos/Tierra/TCurva1.png" id="11_xqoif"]
 [ext_resource type="Texture2D" uid="uid://chpv8uq7o8ykq" path="res://Sprite/Tramos/Tierra/TCurva2.png" id="12_f3r13"]
-[ext_resource type="PackedScene" uid="uid://dcvg84xoeood2" path="res://Scenes/LevelMaker/Asfalto/tierra.tscn" id="14_2nkja"]
+[ext_resource type="Script" path="res://Scripts/Tierra.gd" id="15_nnxum"]
 
 [node name="TestScene" type="Node2D"]
 
@@ -119,18 +119,23 @@ texture = ExtResource("10_iahri")
 [node name="Roca" parent="." instance=ExtResource("10_pr3ht")]
 position = Vector2(1612, -366)
 
-[node name="Tierra" parent="." instance=ExtResource("14_2nkja")]
-
 [node name="Hierba" type="Area2D" parent="."]
 script = ExtResource("10_h453q")
 
 [node name="Hierba exterior" type="CollisionPolygon2D" parent="Hierba"]
-polygon = PackedVector2Array(-1252, -228, 1692, -240, 1992, -392, 2264, -512, 2452, -516, 2616, -396, 2696, -128, 2712, 580, 2756, 812, 3044, 1144, 3164, 1464, 3148, 2876, 3008, 3372, 2764, 3608, 2424, 3768, 1944, 3820, 1516, 3860, 1248, 3756, 1072, 3440, 968, 3004, 964, 2644, 988, 2432, 864, 2460, 888, 2752, 908, 3048, 852, 3292, 704, 3420, 300, 3516, 752, 3600, 916, 3756, 944, 4052, 900, 4468, 764, 4796, 416, 5100, 20, 5220, -636, 5200, -1064, 5140, -1232, 4936, -1224, 4624, -952, 4224, -964, 2084, -932, 1792, -1280, 1704, -1676, 1880, -1988, 2012, -2196, 1900, -2328, 1672, -2336, 1204, -2332, 84, -2296, -332, -2132, -540, -1844, -528, -1268, -227, -1089, -2035, -4688, -1959, -2651, 5820, 4230, 5820, 3798, -1959, -1080, -2031)
+polygon = PackedVector2Array(-1252, -228, 1692, -240, 1992, -392, 2264, -512, 2452, -516, 2616, -396, 2696, -128, 2712, 580, 2756, 812, 3044, 1144, 3164, 1464, 3148, 2876, 3008, 3372, 2764, 3608, 2424, 3768, 1944, 3820, 1516, 3860, 1248, 3756, 1072, 3440, 968, 3004, 964, 2644, 988, 2432, 864, 2460, 888, 2752, 908, 3048, 852, 3292, 704, 3420, 300, 3516, 752, 3600, 916, 3756, 944, 4052, 900, 4468, 764, 4796, 416, 5100, 20, 5220, -636, 5200, -1064, 5140, -1232, 4936, -1224, 4624, -952, 4224, -964, 2084, -932, 1792, -1280, 1704, -1676, 1880, -1988, 2012, -2196, 1900, -2328, 1672, -2336, 1204, -2332, 84, -2296, -332, -2132, -540, -1844, -528, -1542, -325, -1268, -227, -1089, -2035, -4688, -1959, -2651, 5820, 4230, 5820, 3798, -1959, -1080, -2031)
 
 [node name="HierbaInterior" type="CollisionPolygon2D" parent="Hierba"]
 polygon = PackedVector2Array(-1834, 90, -1424, 254, 1776, 260, 2221, 63, 2214, 819, 2424, 1276, 2602, 1435, 2627, 2824, 2509, 3165, 2347, 3281, 2080, 3329, 1576, 3359, 1425, 2857, 1488, 2356, 1450, 2164, 1307, 1993, 1143, 1938, 944, 1938, 757, 1975, 568, 2036, 412, 2263, 387, 2449, 394, 2668, 422, 2996, 188, 3056, -54, 3162, -140, 3336, -173, 3581, -117, 3775, 4, 3888, 200, 3979, 473, 4006, 457, 4279, 379, 4485, 158, 4664, -67, 4714, -621, 4725, -450, 4347, -447, 3903, -450, 2061, -428, 1642, -511, 1490, -704, 1357, -1184, 1204, -1428, 1204, -1647, 1280, -1838, 1376)
 
 [node name="Timer" type="Timer" parent="."]
 
+[node name="Tierra" type="Area2D" parent="."]
+script = ExtResource("15_nnxum")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tierra"]
+polygon = PackedVector2Array(-1252, -193, -1252, 208, -1563, 166, -1881, -4, -1883, 1456, -1597, 1306, -1265, 1244, -854, 1356, -587, 1476, -507, 1603, -477, 1744, -501, 2545, -504, 3053, -908, 3060, -902, 2114, -874, 1772, -1247, 1651, -1419, 1665, -1714, 1843, -1972, 1942, -2170, 1856, -2278, 1596, -2283, -21, -2233, -330, -2068, -472, -1849, -458, -1544, -264)
+
 [connection signal="body_entered" from="Hierba" to="Hierba" method="_on_body_entered"]
 [connection signal="body_exited" from="Hierba" to="Hierba" method="_on_body_exited"]
+[connection signal="body_entered" from="Tierra" to="Tierra" method="_on_body_entered"]

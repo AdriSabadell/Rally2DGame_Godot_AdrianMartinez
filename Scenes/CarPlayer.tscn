@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1i8f2qekw4f3"]
+[gd_scene load_steps=5 format=3 uid="uid://b1i8f2qekw4f3"]
 
 [ext_resource type="Texture2D" uid="uid://c2314o8flkaot" path="res://Sprite/RallyPlayer.png" id="1_3rpsu"]
 [ext_resource type="Script" path="res://Scripts/CarPlayer.gd" id="1_be3sm"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xse61"]
-radius = 3.0
-height = 8.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_ipt4b"]
+radius = 5.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3bp1u"]
+radius = 35.0
+height = 132.0
 
 [node name="Coche" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_be3sm")
@@ -27,10 +30,17 @@ horizontal_alignment = 1
 rotation = 1.5708
 texture = ExtResource("1_3rpsu")
 
-[node name="ColisionCoche" type="CollisionShape2D" parent="."]
-position = Vector2(65, 0)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_xse61")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.61, 0.61)
+
+[node name="Detector" type="CollisionShape2D" parent="."]
+position = Vector2(68, 0)
+rotation = 1.57079
+shape = SubResource("CircleShape2D_ipt4b")
+
+[node name="Area2D" type="Area2D" parent="Detector"]
+position = Vector2(-0.000173259, 78)
+
+[node name="Colision Coche" type="CollisionShape2D" parent="Detector/Area2D"]
+position = Vector2(1.45519e-11, 0)
+shape = SubResource("CapsuleShape2D_3bp1u")

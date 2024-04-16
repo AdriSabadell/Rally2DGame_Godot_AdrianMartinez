@@ -78,9 +78,9 @@ func tierra():
 	drag = -0.06
 	braking = -770
 	max_speed_reverse = 350
-	slip_speed = 350
+	slip_speed = 300
 	traction_fast = 2
-	traction_slow = 6
+	traction_slow = 5
 	
 func hierba():
 	print("Hierba")

@@ -1,11 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dt3qe1yrdps7m"]
+[gd_scene load_steps=3 format=3 uid="uid://dt3qe1yrdps7m"]
 
 [ext_resource type="Script" path="res://Scripts/Roca.gd" id="1_2hwow"]
 [ext_resource type="Texture2D" uid="uid://we3s3egeyomh" path="res://Sprite/Trampas/Roca1.png" id="1_fif6n"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dan44"]
-radius = 84.0
-height = 210.0
 
 [node name="Roca" type="Area2D" groups=["Roca"]]
 script = ExtResource("1_2hwow")
@@ -13,13 +9,13 @@ script = ExtResource("1_2hwow")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_fif6n")
 
-[node name="Detector" type="CollisionShape2D" parent="."]
+[node name="Detector" type="CollisionPolygon2D" parent="."]
 position = Vector2(0, -5)
-shape = SubResource("CapsuleShape2D_dan44")
+polygon = PackedVector2Array(-74, -55, -83, -10, -71, 81, -30, 102, 9, 111, 35, 89, 41, 64, 37, 41, 64, 23, 84, -19, 78, -70, 27, -101, -34, -100)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-64, -62, -66, 59, 4, 96, 30, 66, 32, 24, 68, -8, 67, -68, 0, -102)
+polygon = PackedVector2Array(-64, -62, -74, -14, -64, 70, -21, 92, 9, 98, 29, 82, 32, 29, 58, 12, 75, -26, 67, -68, 25, -99, -30, -95)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
