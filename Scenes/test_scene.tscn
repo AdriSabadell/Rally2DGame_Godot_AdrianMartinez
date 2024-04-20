@@ -139,3 +139,4 @@ polygon = PackedVector2Array(-1252, -193, -1252, 208, -1563, 166, -1881, -4, -18
 [connection signal="body_entered" from="Hierba" to="Hierba" method="_on_body_entered"]
 [connection signal="body_exited" from="Hierba" to="Hierba" method="_on_body_exited"]
 [connection signal="body_entered" from="Tierra" to="Tierra" method="_on_body_entered"]
+[connection signal="body_exited" from="Tierra" to="Tierra" method="_on_body_exited"]

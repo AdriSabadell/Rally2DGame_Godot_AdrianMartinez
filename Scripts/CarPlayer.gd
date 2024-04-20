@@ -15,8 +15,17 @@ var traction_slow = 10
 var acceleration = Vector2.ZERO
 var steer_direction
 
+var tiempo_vuelta_actual = 0
+var vuelta = false 
+
 func _process(delta):
 	#print(velocity.length())
+	if vuelta == true:
+		vuelta_rapida()
+	if vuelta == false:
+		fin_vuelta()
+	#tiempo_vuelta_actual += get_process_delta_time()
+	print(tiempo_vuelta_actual)
 	pass
 
 func _physics_process(delta):
@@ -82,6 +91,7 @@ func tierra():
 	traction_fast = 2
 	traction_slow = 5
 	
+	
 func hierba():
 	print("Hierba")
 	engine_power = 300
@@ -101,3 +111,8 @@ func choque():
 	
 	
 	
+func vuelta_rapida():
+	tiempo_vuelta_actual += get_process_delta_time()
+
+func fin_vuelta():
+	vuelta = false 
