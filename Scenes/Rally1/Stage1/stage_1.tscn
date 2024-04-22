@@ -1,3 +1,318 @@
-[gd_scene format=3 uid="uid://cwrovqqht03de"]
+[gd_scene load_steps=23 format=3 uid="uid://cwrovqqht03de"]
+
+[ext_resource type="Texture2D" uid="uid://dukfevraj882s" path="res://Sprite/Road_01/Road_01_Tile_04/Road_01_Tile_04.png" id="1_jgsxj"]
+[ext_resource type="Texture2D" uid="uid://bodmp1x43201o" path="res://Sprite/Decor/Background_Tiles/Grass_Tile.png" id="1_qla2w"]
+[ext_resource type="Texture2D" uid="uid://c0tjrjwbrqfwu" path="res://Sprite/Road_01/Road_01_Tile_06/Road_01_Tile_06.png" id="2_qt08h"]
+[ext_resource type="Texture2D" uid="uid://ujcoxhrbd03q" path="res://Sprite/Road_01/Road_01_Tile_02/Road_01_Tile_02.png" id="3_gw1yk"]
+[ext_resource type="Texture2D" uid="uid://cu2i01l8cirha" path="res://Sprite/Road_01/Road_01_Tile_04/Layers/Road_Main.png" id="4_auoay"]
+[ext_resource type="Texture2D" uid="uid://cvte06pq07p1c" path="res://Sprite/Road_01/Road_01_Tile_01/Layers/Road_Main.png" id="5_rn1d6"]
+[ext_resource type="Texture2D" uid="uid://ilfcdh71blhc" path="res://Sprite/Road_01/Road_01_Tile_07/Layers/Road_Main.png" id="6_tr5h5"]
+[ext_resource type="Texture2D" uid="uid://l5dcc26fguv8" path="res://Sprite/Road_01/MyRoads/Curva2.png" id="7_bcgjc"]
+[ext_resource type="PackedScene" uid="uid://b1i8f2qekw4f3" path="res://Scenes/CarPlayer.tscn" id="7_rftyt"]
+[ext_resource type="Texture2D" uid="uid://jq005pkmootm" path="res://Sprite/Road_01/Road_01_Tile_08/Layers/Road_Main.png" id="8_0bk5v"]
+[ext_resource type="Texture2D" uid="uid://bj4siskmsm1hi" path="res://Sprite/Decor/Start.png" id="8_g5v2p"]
+[ext_resource type="Texture2D" uid="uid://nwhnt0onjdjx" path="res://Sprite/Decor/Tree_01.png" id="9_nvcb1"]
+[ext_resource type="Texture2D" uid="uid://bi2d8bgobbaio" path="res://Sprite/Road_01/MyRoads/RectaEstrecha.png" id="12_u2t08"]
+[ext_resource type="Texture2D" uid="uid://ccwyjnv0eiqcu" path="res://Sprite/Road_01/MyRoads/CurvaEstrecha.png" id="13_a6pyv"]
+[ext_resource type="Texture2D" uid="uid://dpaql76bepq" path="res://Sprite/Road_01/MyRoads/Curva1.png" id="14_jhwl8"]
+[ext_resource type="Texture2D" uid="uid://de7hsoshn4q8l" path="res://Sprite/Road_01/Road_01_Tile_03/Layers/Road_Main.png" id="15_dba0x"]
+[ext_resource type="Texture2D" uid="uid://duigu8birmlad" path="res://Sprite/Road_01/Road_01_Tile_03/Road_01_Tile_03.png" id="15_e18x7"]
+[ext_resource type="Texture2D" uid="uid://ciot33nsrftch" path="res://Sprite/Road_01/Road_01_Tile_06/Layers/Road_Main.png" id="16_ue0fe"]
+[ext_resource type="Texture2D" uid="uid://nyhbu838mlay" path="res://Sprite/Road_01/Road_01_Tile_05/Road_01_Tile_05.png" id="17_rd6ff"]
+[ext_resource type="Texture2D" uid="uid://qejtjvjccio0" path="res://Sprite/Decor/Finish.png" id="19_l2kyl"]
+[ext_resource type="Texture2D" uid="uid://b2qtyv4bj4ksn" path="res://Sprite/Road_01/Road_01_Tile_07/Road_01_Tile_07.png" id="21_hmytb"]
+[ext_resource type="Texture2D" uid="uid://b4i0ysirhhoho" path="res://Sprite/Road_01/Road_01_Tile_01/Road_01_Tile_01.png" id="22_xqqhf"]
 
 [node name="Stage1" type="Node2D"]
+
+[node name="Fondo" type="Node2D" parent="."]
+
+[node name="GrassTile" type="Sprite2D" parent="Fondo"]
+position = Vector2(261, 485)
+texture = ExtResource("1_qla2w")
+
+[node name="GrassTile2" type="Sprite2D" parent="Fondo"]
+position = Vector2(771, 485)
+texture = ExtResource("1_qla2w")
+
+[node name="Suelos" type="Node2D" parent="."]
+
+[node name="Road01Tile04" type="Sprite2D" parent="Suelos"]
+position = Vector2(254, -15)
+texture = ExtResource("1_jgsxj")
+
+[node name="Road01Tile05" type="Sprite2D" parent="Suelos"]
+position = Vector2(766, -15)
+texture = ExtResource("1_jgsxj")
+
+[node name="Road01Tile06" type="Sprite2D" parent="Suelos"]
+position = Vector2(1449, 669)
+rotation = 1.57079
+texture = ExtResource("2_qt08h")
+flip_h = true
+
+[node name="Road01Tile02" type="Sprite2D" parent="Suelos"]
+position = Vector2(1320, -14)
+rotation = 1.57079
+texture = ExtResource("3_gw1yk")
+
+[node name="RoadMain" type="Sprite2D" parent="Suelos"]
+position = Vector2(1577, 1309)
+rotation = 1.57079
+texture = ExtResource("4_auoay")
+
+[node name="RoadMain2" type="Sprite2D" parent="Suelos"]
+position = Vector2(1577, 1821)
+rotation = 1.57079
+texture = ExtResource("4_auoay")
+
+[node name="RoadMain3" type="Sprite2D" parent="Suelos"]
+position = Vector2(1577, 2324)
+rotation = 1.57079
+texture = ExtResource("4_auoay")
+
+[node name="RoadMain4" type="Sprite2D" parent="Suelos"]
+position = Vector2(1599, 2856)
+texture = ExtResource("5_rn1d6")
+
+[node name="RoadMain6" type="Sprite2D" parent="Suelos"]
+position = Vector2(2005, 2878)
+texture = ExtResource("6_tr5h5")
+
+[node name="RoadMain5" type="Sprite2D" parent="Suelos"]
+position = Vector2(2412, 2857)
+rotation = -1.57079
+texture = ExtResource("5_rn1d6")
+
+[node name="Curva2" type="Sprite2D" parent="Suelos"]
+position = Vector2(2397, 2528)
+rotation = 0.785397
+texture = ExtResource("7_bcgjc")
+
+[node name="RoadMain7" type="Sprite2D" parent="Suelos"]
+position = Vector2(2702, 2194)
+rotation = -0.785397
+texture = ExtResource("4_auoay")
+
+[node name="RoadMain8" type="Sprite2D" parent="Suelos"]
+position = Vector2(3063, 1834)
+rotation = -0.785397
+texture = ExtResource("8_0bk5v")
+
+[node name="RoadMain9" type="Sprite2D" parent="Suelos"]
+position = Vector2(4675, 1484)
+rotation = -2.35619
+texture = ExtResource("8_0bk5v")
+
+[node name="RectaEstrecha" type="Sprite2D" parent="Suelos"]
+position = Vector2(3425, 1474)
+rotation = -0.785397
+texture = ExtResource("12_u2t08")
+
+[node name="RectaEstrecha2" type="Sprite2D" parent="Suelos"]
+position = Vector2(3779, 1120)
+rotation = -0.785397
+texture = ExtResource("12_u2t08")
+
+[node name="CurvaEstrecha" type="Sprite2D" parent="Suelos"]
+position = Vector2(4046, 853)
+rotation = -2.35619
+texture = ExtResource("13_a6pyv")
+
+[node name="RectaEstrecha3" type="Sprite2D" parent="Suelos"]
+position = Vector2(4315, 1124)
+rotation = 0.785397
+texture = ExtResource("12_u2t08")
+
+[node name="Curva1" type="Sprite2D" parent="Suelos"]
+position = Vector2(4871, 1731)
+texture = ExtResource("14_jhwl8")
+
+[node name="RoadMain10" type="Sprite2D" parent="Suelos"]
+position = Vector2(5322, 1753)
+texture = ExtResource("15_dba0x")
+
+[node name="RoadMain11" type="Sprite2D" parent="Suelos"]
+position = Vector2(5830, 1753)
+texture = ExtResource("15_dba0x")
+
+[node name="RoadMain12" type="Sprite2D" parent="Suelos"]
+position = Vector2(6342, 1753)
+texture = ExtResource("15_dba0x")
+
+[node name="RoadMain13" type="Sprite2D" parent="Suelos"]
+position = Vector2(6977, 1882)
+texture = ExtResource("16_ue0fe")
+
+[node name="RoadMain14" type="Sprite2D" parent="Suelos"]
+position = Vector2(7638, 1988)
+rotation = -1.57079
+texture = ExtResource("5_rn1d6")
+
+[node name="Curva3" type="Sprite2D" parent="Suelos"]
+position = Vector2(7625, 1659)
+rotation = 0.785397
+texture = ExtResource("7_bcgjc")
+
+[node name="RoadMain15" type="Sprite2D" parent="Suelos"]
+position = Vector2(7931, 1325)
+rotation = -0.785397
+texture = ExtResource("4_auoay")
+
+[node name="RoadMain16" type="Sprite2D" parent="Suelos"]
+position = Vector2(8293, 934)
+rotation = -2.35619
+texture = ExtResource("5_rn1d6")
+
+[node name="RoadMain17" type="Sprite2D" parent="Suelos"]
+position = Vector2(8022, 633)
+rotation = 0.785397
+texture = ExtResource("6_tr5h5")
+
+[node name="Curva4" type="Sprite2D" parent="Suelos"]
+position = Vector2(7778, 422)
+rotation = 2.35619
+texture = ExtResource("7_bcgjc")
+
+[node name="Road01Tile07" type="Sprite2D" parent="Suelos"]
+position = Vector2(7423, -98)
+texture = ExtResource("17_rd6ff")
+
+[node name="RoadMain18" type="Sprite2D" parent="Suelos"]
+position = Vector2(7445, 436)
+texture = ExtResource("5_rn1d6")
+
+[node name="RoadMain19" type="Sprite2D" parent="Suelos"]
+position = Vector2(6910, -98)
+texture = ExtResource("15_dba0x")
+
+[node name="RoadMain20" type="Sprite2D" parent="Suelos"]
+position = Vector2(7423, -608)
+rotation = 1.57079
+texture = ExtResource("15_dba0x")
+
+[node name="Road01Tile03" type="Sprite2D" parent="Suelos"]
+position = Vector2(8441, -98)
+texture = ExtResource("15_e18x7")
+
+[node name="RoadMain21" type="Sprite2D" parent="Suelos"]
+position = Vector2(6399, -98)
+texture = ExtResource("15_dba0x")
+
+[node name="RoadMain22" type="Sprite2D" parent="Suelos"]
+position = Vector2(7930, -98)
+texture = ExtResource("15_dba0x")
+
+[node name="Road01Tile08" type="Sprite2D" parent="Suelos"]
+position = Vector2(9124, -782)
+rotation = -1.57079
+texture = ExtResource("2_qt08h")
+
+[node name="Road01Tile09" type="Sprite2D" parent="Suelos"]
+position = Vector2(8996, -100)
+rotation = 3.14159
+texture = ExtResource("3_gw1yk")
+
+[node name="Road01Tile10" type="Sprite2D" parent="Suelos"]
+position = Vector2(9251, -1422)
+rotation = 1.57079
+texture = ExtResource("15_e18x7")
+
+[node name="Road01Tile11" type="Sprite2D" parent="Suelos"]
+position = Vector2(9251, -1933)
+rotation = 1.57079
+texture = ExtResource("15_e18x7")
+
+[node name="Road01Tile12" type="Sprite2D" parent="Suelos"]
+position = Vector2(10105, -1933)
+rotation = 1.57079
+texture = ExtResource("15_e18x7")
+
+[node name="Road01Tile13" type="Sprite2D" parent="Suelos"]
+position = Vector2(10105, -1426)
+rotation = 1.57079
+texture = ExtResource("15_e18x7")
+
+[node name="Road01Tile14" type="Sprite2D" parent="Suelos"]
+position = Vector2(9677, -2484)
+texture = ExtResource("21_hmytb")
+
+[node name="Road01Tile01" type="Sprite2D" parent="Suelos"]
+position = Vector2(9252, -2484)
+rotation = 1.57079
+texture = ExtResource("22_xqqhf")
+
+[node name="Road01Tile18" type="Sprite2D" parent="Suelos"]
+position = Vector2(10530, -872)
+texture = ExtResource("21_hmytb")
+
+[node name="Road01Tile19" type="Sprite2D" parent="Suelos"]
+position = Vector2(10961, -456)
+rotation = 1.57079
+texture = ExtResource("21_hmytb")
+
+[node name="Road01Tile17" type="Sprite2D" parent="Suelos"]
+position = Vector2(10960, -872)
+rotation = 1.57079
+texture = ExtResource("3_gw1yk")
+
+[node name="Road01Tile16" type="Sprite2D" parent="Suelos"]
+position = Vector2(10105, -874)
+texture = ExtResource("22_xqqhf")
+
+[node name="Road01Tile15" type="Sprite2D" parent="Suelos"]
+position = Vector2(10104, -2483)
+rotation = 1.57079
+texture = ExtResource("3_gw1yk")
+
+[node name="Curva5" type="Sprite2D" parent="Suelos"]
+position = Vector2(10925, -271)
+rotation = 0.785397
+texture = ExtResource("14_jhwl8")
+
+[node name="Road01Tile20" type="Sprite2D" parent="Suelos"]
+position = Vector2(11410, 64.0005)
+rotation = 0.785397
+texture = ExtResource("2_qt08h")
+flip_h = true
+
+[node name="Curva6" type="Sprite2D" parent="Suelos"]
+position = Vector2(11787, 310)
+texture = ExtResource("14_jhwl8")
+
+[node name="Road01Tile21" type="Sprite2D" parent="Suelos"]
+position = Vector2(12241, 331)
+texture = ExtResource("15_e18x7")
+
+[node name="Road01Tile22" type="Sprite2D" parent="Suelos"]
+position = Vector2(12751, 331)
+texture = ExtResource("15_e18x7")
+
+[node name="Road01Tile23" type="Sprite2D" parent="Suelos"]
+position = Vector2(13261, 331)
+texture = ExtResource("15_e18x7")
+
+[node name="Road01Tile24" type="Sprite2D" parent="Suelos"]
+position = Vector2(13774, 331)
+texture = ExtResource("15_e18x7")
+
+[node name="Decoracio" type="Node2D" parent="."]
+
+[node name="Start" type="Sprite2D" parent="Decoracio"]
+position = Vector2(574, -16)
+rotation = 1.57079
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("8_g5v2p")
+
+[node name="Tree01" type="Sprite2D" parent="Decoracio"]
+position = Vector2(1890, 308)
+scale = Vector2(0.655, 0.655)
+texture = ExtResource("9_nvcb1")
+
+[node name="Finish" type="Sprite2D" parent="Decoracio"]
+position = Vector2(13245, 333)
+rotation = 1.57079
+scale = Vector2(0.315, 0.315)
+texture = ExtResource("19_l2kyl")
+
+[node name="Coche" parent="." instance=ExtResource("7_rftyt")]
