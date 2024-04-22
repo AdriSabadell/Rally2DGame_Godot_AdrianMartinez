@@ -15,17 +15,19 @@ var traction_slow = 10
 var acceleration = Vector2.ZERO
 var steer_direction
 
-var tiempo_vuelta_actual = 0
+#var tiempo_actual = 0
 var vuelta = false 
+
+@onready var time_text : Label = get_node("CanvasLayer/Tiempo Etapa")
+
 
 func _process(delta):
 	#print(velocity.length())
 	if vuelta == true:
 		vuelta_rapida()
-	if vuelta == false:
-		fin_vuelta()
 	#tiempo_vuelta_actual += get_process_delta_time()
-	print(tiempo_vuelta_actual)
+	#print(Global.tiempo_actual)
+	time_text.text = str(Global.tiempo_actual)
 	pass
 
 func _physics_process(delta):
@@ -102,17 +104,19 @@ func hierba():
 	slip_speed = 200
 	traction_fast = 1
 	traction_slow = 4
-
+	 
 func choque():
 	#print("Choque")
 	print(velocity.length())
 	if velocity.length() > 400:
 		print("Daños grabes")
-	
-	
+
+func empiezaEtapa():
+	vuelta = true
 	
 func vuelta_rapida():
-	tiempo_vuelta_actual += get_process_delta_time()
-
-func fin_vuelta():
+	Global.tiempo_actual += get_process_delta_time()
+	
+func finalEtapa():
 	vuelta = false 
+	get_tree().change_scene_to_file("res://Scenes/test_scene.tscn")

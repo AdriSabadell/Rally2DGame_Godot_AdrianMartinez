@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://l5dcc26fguv8" path="res://Sprite/Road_01/MyRoads/Curva2.png" id="7_bcgjc"]
 [ext_resource type="PackedScene" uid="uid://b1i8f2qekw4f3" path="res://Scenes/CarPlayer.tscn" id="7_rftyt"]
 [ext_resource type="Texture2D" uid="uid://jq005pkmootm" path="res://Sprite/Road_01/Road_01_Tile_08/Layers/Road_Main.png" id="8_0bk5v"]
-[ext_resource type="Texture2D" uid="uid://bj4siskmsm1hi" path="res://Sprite/Decor/Start.png" id="8_g5v2p"]
 [ext_resource type="Texture2D" uid="uid://nwhnt0onjdjx" path="res://Sprite/Decor/Tree_01.png" id="9_nvcb1"]
 [ext_resource type="Texture2D" uid="uid://bi2d8bgobbaio" path="res://Sprite/Road_01/MyRoads/RectaEstrecha.png" id="12_u2t08"]
 [ext_resource type="Texture2D" uid="uid://ccwyjnv0eiqcu" path="res://Sprite/Road_01/MyRoads/CurvaEstrecha.png" id="13_a6pyv"]
@@ -19,26 +18,35 @@
 [ext_resource type="Texture2D" uid="uid://duigu8birmlad" path="res://Sprite/Road_01/Road_01_Tile_03/Road_01_Tile_03.png" id="15_e18x7"]
 [ext_resource type="Texture2D" uid="uid://ciot33nsrftch" path="res://Sprite/Road_01/Road_01_Tile_06/Layers/Road_Main.png" id="16_ue0fe"]
 [ext_resource type="Texture2D" uid="uid://nyhbu838mlay" path="res://Sprite/Road_01/Road_01_Tile_05/Road_01_Tile_05.png" id="17_rd6ff"]
-[ext_resource type="Texture2D" uid="uid://qejtjvjccio0" path="res://Sprite/Decor/Finish.png" id="19_l2kyl"]
 [ext_resource type="Texture2D" uid="uid://b2qtyv4bj4ksn" path="res://Sprite/Road_01/Road_01_Tile_07/Road_01_Tile_07.png" id="21_hmytb"]
+[ext_resource type="PackedScene" uid="uid://l1f4isln8ofe" path="res://Scenes/LevelMaker/Elementos Fuera/meta.tscn" id="22_tuio8"]
 [ext_resource type="Texture2D" uid="uid://b4i0ysirhhoho" path="res://Sprite/Road_01/Road_01_Tile_01/Road_01_Tile_01.png" id="22_xqqhf"]
+[ext_resource type="PackedScene" uid="uid://dvtpw1h37fytx" path="res://Scenes/LevelMaker/Elementos Fuera/salida.tscn" id="23_cj30l"]
 
 [node name="Stage1" type="Node2D"]
 
 [node name="Fondo" type="Node2D" parent="."]
 
 [node name="GrassTile" type="Sprite2D" parent="Fondo"]
-position = Vector2(261, 485)
+position = Vector2(261, 574)
 texture = ExtResource("1_qla2w")
 
 [node name="GrassTile2" type="Sprite2D" parent="Fondo"]
-position = Vector2(771, 485)
+position = Vector2(771, 574)
 texture = ExtResource("1_qla2w")
 
 [node name="Suelos" type="Node2D" parent="."]
 
 [node name="Road01Tile04" type="Sprite2D" parent="Suelos"]
 position = Vector2(254, -15)
+texture = ExtResource("1_jgsxj")
+
+[node name="Road01Tile25" type="Sprite2D" parent="Suelos"]
+position = Vector2(-255, -15)
+texture = ExtResource("1_jgsxj")
+
+[node name="Road01Tile26" type="Sprite2D" parent="Suelos"]
+position = Vector2(-767, -15)
 texture = ExtResource("1_jgsxj")
 
 [node name="Road01Tile05" type="Sprite2D" parent="Suelos"]
@@ -298,21 +306,19 @@ texture = ExtResource("15_e18x7")
 
 [node name="Decoracio" type="Node2D" parent="."]
 
-[node name="Start" type="Sprite2D" parent="Decoracio"]
-position = Vector2(574, -16)
-rotation = 1.57079
-scale = Vector2(0.31, 0.31)
-texture = ExtResource("8_g5v2p")
-
 [node name="Tree01" type="Sprite2D" parent="Decoracio"]
 position = Vector2(1890, 308)
 scale = Vector2(0.655, 0.655)
 texture = ExtResource("9_nvcb1")
 
-[node name="Finish" type="Sprite2D" parent="Decoracio"]
-position = Vector2(13245, 333)
-rotation = 1.57079
-scale = Vector2(0.315, 0.315)
-texture = ExtResource("19_l2kyl")
-
 [node name="Coche" parent="." instance=ExtResource("7_rftyt")]
+
+[node name="Salida" parent="." instance=ExtResource("23_cj30l")]
+position = Vector2(566, -15)
+rotation = 1.57079
+scale = Vector2(0.31, 0.31)
+
+[node name="Meta" parent="." instance=ExtResource("22_tuio8")]
+position = Vector2(12487, 330)
+rotation = 1.57079
+scale = Vector2(0.319998, 0.319998)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1i8f2qekw4f3"]
+[gd_scene load_steps=6 format=3 uid="uid://b1i8f2qekw4f3"]
 
 [ext_resource type="Texture2D" uid="uid://c2314o8flkaot" path="res://Sprite/RallyPlayer.png" id="1_3rpsu"]
 [ext_resource type="Script" path="res://Scripts/CarPlayer.gd" id="1_be3sm"]
+[ext_resource type="Script" path="res://Scripts/Global.gd" id="3_1spra"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ipt4b"]
 radius = 5.0
@@ -44,3 +45,6 @@ position = Vector2(-0.000173259, 78)
 [node name="Colision Coche" type="CollisionShape2D" parent="Detector/Area2D"]
 position = Vector2(1.45519e-11, 0)
 shape = SubResource("CapsuleShape2D_3bp1u")
+
+[node name="TiempoGlobal" type="Node" parent="."]
+script = ExtResource("3_1spra")

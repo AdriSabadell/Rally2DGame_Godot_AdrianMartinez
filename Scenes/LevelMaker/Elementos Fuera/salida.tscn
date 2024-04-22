@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvtpw1h37fytx"]
+
+[ext_resource type="Texture2D" uid="uid://bj4siskmsm1hi" path="res://Sprite/Decor/Start.png" id="1_qsysk"]
+[ext_resource type="Script" path="res://Scripts/Salida.gd" id="2_cvnnr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4coq"]
+size = Vector2(1436, 440)
+
+[node name="Salida" type="Area2D"]
+script = ExtResource("2_cvnnr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qsysk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_a4coq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
