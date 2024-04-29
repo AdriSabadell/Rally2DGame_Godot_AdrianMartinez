@@ -3,7 +3,7 @@ extends CharacterBody2D
 #Asfalto
 var wheel_base = 70
 var steering_angle = 12
-var engine_power = 1300
+var engine_power = 1400
 var friction = -0.54
 var drag = -0.06
 var braking = -770
@@ -84,7 +84,7 @@ func asfalto():
 	
 func tierra():
 	print("Tierra")
-	engine_power = 1150
+	engine_power = 1250
 	friction = -0.54
 	drag = -0.06
 	braking = -770

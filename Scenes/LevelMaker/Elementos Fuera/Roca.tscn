@@ -1,21 +1,23 @@
 [gd_scene load_steps=3 format=3 uid="uid://dt3qe1yrdps7m"]
 
 [ext_resource type="Script" path="res://Scripts/Roca.gd" id="1_2hwow"]
-[ext_resource type="Texture2D" uid="uid://we3s3egeyomh" path="res://Sprite/Trampas/Roca1.png" id="1_fif6n"]
+[ext_resource type="Texture2D" uid="uid://cknksmk5a23ph" path="res://Sprite/Decor/Rock_01.png" id="2_jr8m1"]
 
 [node name="Roca" type="Area2D" groups=["Roca"]]
 script = ExtResource("1_2hwow")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_fif6n")
+[node name="Rock01" type="Sprite2D" parent="."]
+position = Vector2(15, -14)
+scale = Vector2(0.413551, 0.413551)
+texture = ExtResource("2_jr8m1")
 
 [node name="Detector" type="CollisionPolygon2D" parent="."]
-position = Vector2(0, -5)
-polygon = PackedVector2Array(-74, -55, -83, -10, -71, 81, -30, 102, 9, 111, 35, 89, 41, 64, 37, 41, 64, 23, 84, -19, 78, -70, 27, -101, -34, -100)
+position = Vector2(-2, -9)
+polygon = PackedVector2Array(-134, -19, -127, 59, -65, 84, -34, 86, 24, 81, 121, 80, 159, 67, 164, 49, 150, 23, 135, -37, 100, -77, 9, -96, -107, -84)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-64, -62, -74, -14, -64, 70, -21, 92, 9, 98, 29, 82, 32, 29, 58, 12, 75, -26, 67, -68, 25, -99, -30, -95)
+polygon = PackedVector2Array(-126, -31, -122, 42, -64, 70, 16, 67, 116, 63, 148, 52, 151, 37, 134, 4, 123, -39, 93, -74, 4, -96, -99, -86)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

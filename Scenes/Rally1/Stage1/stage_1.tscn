@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cwrovqqht03de"]
+[gd_scene load_steps=27 format=3 uid="uid://cwrovqqht03de"]
 
 [ext_resource type="Texture2D" uid="uid://dukfevraj882s" path="res://Sprite/Road_01/Road_01_Tile_04/Road_01_Tile_04.png" id="1_jgsxj"]
 [ext_resource type="Texture2D" uid="uid://bodmp1x43201o" path="res://Sprite/Decor/Background_Tiles/Grass_Tile.png" id="1_qla2w"]
@@ -22,6 +22,10 @@
 [ext_resource type="PackedScene" uid="uid://l1f4isln8ofe" path="res://Scenes/LevelMaker/Elementos Fuera/meta.tscn" id="22_tuio8"]
 [ext_resource type="Texture2D" uid="uid://b4i0ysirhhoho" path="res://Sprite/Road_01/Road_01_Tile_01/Road_01_Tile_01.png" id="22_xqqhf"]
 [ext_resource type="PackedScene" uid="uid://dvtpw1h37fytx" path="res://Scenes/LevelMaker/Elementos Fuera/salida.tscn" id="23_cj30l"]
+[ext_resource type="Script" path="res://Scripts/Asfalto.gd" id="23_xhyic"]
+[ext_resource type="Texture2D" uid="uid://c3bqqmxrwjkao" path="res://Sprite/Decor/Decor_Building_01.png" id="24_vv38p"]
+[ext_resource type="Texture2D" uid="uid://dwf6kvt1mnoj1" path="res://Sprite/Decor/Decor_Building_02.png" id="25_opwmh"]
+[ext_resource type="PackedScene" uid="uid://dt3qe1yrdps7m" path="res://Scenes/LevelMaker/Elementos Fuera/Roca.tscn" id="26_qbt8y"]
 
 [node name="Stage1" type="Node2D"]
 
@@ -311,8 +315,6 @@ position = Vector2(1890, 308)
 scale = Vector2(0.655, 0.655)
 texture = ExtResource("9_nvcb1")
 
-[node name="Coche" parent="." instance=ExtResource("7_rftyt")]
-
 [node name="Salida" parent="." instance=ExtResource("23_cj30l")]
 position = Vector2(566, -15)
 rotation = 1.57079
@@ -322,3 +324,121 @@ scale = Vector2(0.31, 0.31)
 position = Vector2(12487, 330)
 rotation = 1.57079
 scale = Vector2(0.319998, 0.319998)
+
+[node name="Coche" parent="." instance=ExtResource("7_rftyt")]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("23_xhyic")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(1313, 1065, 1320, 2632, 1402, 2852, 1549, 3012, 1706, 3093, 1865, 3116, 2198, 3123, 2398, 3069, 2554, 2938, 2653, 2760, 2685, 2561, 3193, 2047, 3262, 1915, 3300, 1761, 3728, 2074, 4408, 1381, 4505, 1646, 4801, 1939, 5027, 2010, 6784, 2008, 6885, 2070, 7048, 2193, 7183, 2259, 7475, 2265, 7642, 2208, 7761, 2109, 7906, 1865, 7933, 1700, 8387, 1227, 8444, 1066, 8461, 913, 8439, 765, 8380, 624, 8192, 436, 7972, 260, 7777, 198, 7691, 188, 7678, 158, 8175, 161, 8185, 273, 11987, 696, 14122, 706, 14037, -62, 11100, -2273, 10702.9, -2544.62, 9477, -3383, 8068, -3095, 7758, -2380, 6861, -1611, 6135, -938, 5868, 173, 6623, 162, 7168, 159, 7207, 381, 7328, 554, 7530, 678, 7723, 718, 7943, 927, 7543, 1342, 7424, 1535, 7378, 1749, 7173, 1746, 6962, 1609, 6746, 1490, 5043, 1490, 4831, 1304, 4582, 1219, 4908, 692, 3887, 288, 3157, 831, 3138, 1587, 2960, 1627, 2818, 1713, 2408, 2115, 2218, 2358, 2164, 2615, 1845, 2627, 1836, 1869, 1822, 1037, 3009, -497, 8885, -4980, 15953, 55, 15225, 2801, 1087, 4106, 477, 1360)
+
+[node name="Casas" type="Node2D" parent="."]
+
+[node name="DecorBuilding01" type="Sprite2D" parent="Casas"]
+position = Vector2(-457, -908)
+rotation = -3.14159
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding02" type="Sprite2D" parent="Casas"]
+position = Vector2(628, 979)
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding14" type="Sprite2D" parent="Casas"]
+position = Vector2(3340, 878)
+rotation = 0.785397
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding15" type="Sprite2D" parent="Casas"]
+position = Vector2(3905, 1644)
+rotation = 0.785397
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding16" type="Sprite2D" parent="Casas"]
+position = Vector2(4467, 614)
+rotation = 2.35619
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding04" type="Sprite2D" parent="Casas"]
+position = Vector2(8532, -1557)
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding12" type="Sprite2D" parent="Casas"]
+position = Vector2(8664, -2666)
+rotation = 0.523598
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding05" type="Sprite2D" parent="Casas"]
+position = Vector2(10806, -1738)
+rotation = -3.14159
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding13" type="Sprite2D" parent="Casas"]
+position = Vector2(10824, -2853)
+rotation = -2.12368
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding06" type="Sprite2D" parent="Casas"]
+position = Vector2(10117, -197)
+rotation = -1.57079
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding07" type="Sprite2D" parent="Casas"]
+position = Vector2(11682, -744)
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding08" type="Sprite2D" parent="Casas"]
+position = Vector2(12553, -392)
+rotation = 1.57079
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding09" type="Sprite2D" parent="Casas"]
+position = Vector2(12353, 1230)
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding10" type="Sprite2D" parent="Casas"]
+position = Vector2(13090, 1230)
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding11" type="Sprite2D" parent="Casas"]
+position = Vector2(13451, -577)
+rotation = 3.14159
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding03" type="Sprite2D" parent="Casas"]
+position = Vector2(-181, 936)
+rotation = -6.28318
+texture = ExtResource("24_vv38p")
+
+[node name="DecorBuilding02" type="Sprite2D" parent="."]
+position = Vector2(461, -791)
+rotation = -1.57079
+texture = ExtResource("25_opwmh")
+
+[node name="DecorBuilding03" type="Sprite2D" parent="."]
+position = Vector2(5943, 1074)
+rotation = -1.57079
+texture = ExtResource("25_opwmh")
+
+[node name="DecorBuilding04" type="Sprite2D" parent="."]
+position = Vector2(9711, -3258)
+rotation = -1.57079
+texture = ExtResource("25_opwmh")
+
+[node name="Roca" parent="." instance=ExtResource("26_qbt8y")]
+position = Vector2(1999, 2528)
+
+[node name="Roca2" parent="." instance=ExtResource("26_qbt8y")]
+position = Vector2(7707, 2398)
+rotation = -1.83259
+
+[node name="Roca3" parent="." instance=ExtResource("26_qbt8y")]
+position = Vector2(7868, -486)
+
+[node name="Roca4" parent="." instance=ExtResource("26_qbt8y")]
+position = Vector2(7209, 1576)
+rotation = -2.61799
+
+[connection signal="body_entered" from="Area2D" to="Coche" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
