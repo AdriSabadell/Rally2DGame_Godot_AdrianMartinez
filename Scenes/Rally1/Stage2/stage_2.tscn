@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dvtpw1h37fytx" path="res://Scenes/LevelMaker/Elementos Fuera/salida.tscn" id="21_siyjd"]
 [ext_resource type="PackedScene" uid="uid://l1f4isln8ofe" path="res://Scenes/LevelMaker/Elementos Fuera/meta.tscn" id="22_pgwat"]
 
-[node name="Stage1" type="Node2D"]
+[node name="Stage2" type="Node2D"]
 
 [node name="Fondo" type="Node2D" parent="."]
 
