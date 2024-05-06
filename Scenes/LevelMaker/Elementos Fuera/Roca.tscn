@@ -18,6 +18,6 @@ polygon = PackedVector2Array(-134, -19, -127, 59, -65, 84, -34, 86, 24, 81, 121,
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-126, -31, -122, 42, -64, 70, 16, 67, 116, 63, 148, 52, 151, 37, 134, 4, 123, -39, 93, -74, 4, -96, -99, -86)
+polygon = PackedVector2Array(-125, -27, -122, 44, -60, 64, 21, 61, 110, 60, 147, 54, 150, 40, 135, 14, 114, -36, 91, -69, -1, -88, -97, -77)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

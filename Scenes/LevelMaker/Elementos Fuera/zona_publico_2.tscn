@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckxflgylxl8xi"]
+
+[ext_resource type="Script" path="res://Scripts/Roca.gd" id="1_f3k4i"]
+[ext_resource type="Texture2D" uid="uid://rltfaujr25ce" path="res://Sprite/Decor/Pavilion_02.png" id="2_5yvxo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3brjm"]
+size = Vector2(1184.16, 534.654)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7to57"]
+size = Vector2(1152.47, 502.97)
+
+[node name="ZonaPublico1" type="Area2D"]
+script = ExtResource("1_f3k4i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.505, 0.505)
+texture = ExtResource("2_5yvxo")
+
+[node name="Detector" type="CollisionShape2D" parent="."]
+position = Vector2(-18.0006, 20)
+scale = Vector2(0.505, 0.505)
+shape = SubResource("RectangleShape2D_3brjm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-0.999988, -4)
+scale = Vector2(0.505, 0.505)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-33.6628, 39.6039)
+shape = SubResource("RectangleShape2D_7to57")
+debug_color = Color(0.333333, 0.623529, 0, 0.419608)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

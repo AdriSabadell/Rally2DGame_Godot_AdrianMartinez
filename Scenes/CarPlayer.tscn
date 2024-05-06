@@ -1,15 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1i8f2qekw4f3"]
+[gd_scene load_steps=17 format=3 uid="uid://b1i8f2qekw4f3"]
 
 [ext_resource type="Texture2D" uid="uid://c2314o8flkaot" path="res://Sprite/RallyPlayer.png" id="1_3rpsu"]
 [ext_resource type="Script" path="res://Scripts/CarPlayer.gd" id="1_be3sm"]
+[ext_resource type="Texture2D" uid="uid://dr0yldcyp3kan" path="res://Sprite/Icons/mechanic-garage.png" id="2_dm3vh"]
+[ext_resource type="Texture2D" uid="uid://dysdjakltgdla" path="res://Sprite/Icons/car-wheel (2).png" id="2_i3w7e"]
+[ext_resource type="Texture2D" uid="uid://cub5ifnsymx0o" path="res://Sprite/Icons/speedometer.png" id="2_m743h"]
 [ext_resource type="Script" path="res://Scripts/Global.gd" id="3_1spra"]
+[ext_resource type="Texture2D" uid="uid://c0hedw4x3dio7" path="res://Sprite/Icons/mechanic-garage (1).png" id="3_jt738"]
+[ext_resource type="Texture2D" uid="uid://q6p5ncm4buqy" path="res://Sprite/Icons/speedometer (2).png" id="3_xaksv"]
+[ext_resource type="Texture2D" uid="uid://blfb2boypm34n" path="res://Sprite/Icons/steering-wheel (3).png" id="4_ehek2"]
+[ext_resource type="Texture2D" uid="uid://oaixyo1ccihf" path="res://Sprite/Icons/mechanic-garage (2).png" id="4_ktb8u"]
+[ext_resource type="Texture2D" uid="uid://icor6hw55hvq" path="res://Sprite/Icons/speedometer (1).png" id="4_we8g7"]
+[ext_resource type="Texture2D" uid="uid://c73p8jtb2yxn4" path="res://Sprite/Icons/car-wheel (1).png" id="6_w8pkb"]
+[ext_resource type="Texture2D" uid="uid://de1nym57r8xa1" path="res://Sprite/Icons/car-wheel.png" id="7_exnom"]
+[ext_resource type="Texture2D" uid="uid://c0i6oac3g1kht" path="res://Sprite/Icons/steering-wheel (2).png" id="9_g2or5"]
+[ext_resource type="Texture2D" uid="uid://sakmahwkcgni" path="res://Sprite/Icons/steering-wheel (1).png" id="10_dbqmk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ipt4b"]
 radius = 5.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3bp1u"]
-radius = 35.0
-height = 132.0
 
 [node name="Coche" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_be3sm")
@@ -18,14 +26,75 @@ script = ExtResource("1_be3sm")
 layer = 5
 
 [node name="Tiempo Etapa" type="Label" parent="CanvasLayer"]
-offset_left = 403.0
+offset_left = 844.0
 offset_top = 5.0
-offset_right = 794.0
+offset_right = 1235.0
 offset_bottom = 266.0
 theme_override_font_sizes/font_size = 86
 text = "0
 "
 horizontal_alignment = 1
+
+[node name="Mecanico" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1047, 562)
+scale = Vector2(0.255859, 0.255859)
+texture = ExtResource("2_dm3vh")
+
+[node name="Mecanico2" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(1047, 562)
+scale = Vector2(0.255859, 0.255859)
+texture = ExtResource("3_jt738")
+
+[node name="Mecanico3" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(1047, 562)
+scale = Vector2(0.255859, 0.255859)
+texture = ExtResource("4_ktb8u")
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(945.75, 586.25)
+scale = Vector2(0.125977, 0.125977)
+
+[node name="Motor" type="Sprite2D" parent="CanvasLayer/Node2D"]
+texture = ExtResource("2_m743h")
+
+[node name="Motor2" type="Sprite2D" parent="CanvasLayer/Node2D"]
+visible = false
+texture = ExtResource("3_xaksv")
+
+[node name="Motor3" type="Sprite2D" parent="CanvasLayer/Node2D"]
+visible = false
+texture = ExtResource("4_we8g7")
+
+[node name="Rueda" type="Sprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(573.517, 0)
+texture = ExtResource("2_i3w7e")
+
+[node name="Rueda2" type="Sprite2D" parent="CanvasLayer/Node2D"]
+visible = false
+position = Vector2(573.517, 0)
+texture = ExtResource("6_w8pkb")
+
+[node name="Rueda3" type="Sprite2D" parent="CanvasLayer/Node2D"]
+visible = false
+position = Vector2(573.517, 0)
+texture = ExtResource("7_exnom")
+
+[node name="Traccion" type="Sprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(1145.05, 0)
+texture = ExtResource("4_ehek2")
+
+[node name="Traccion2" type="Sprite2D" parent="CanvasLayer/Node2D"]
+visible = false
+position = Vector2(1145.05, 0)
+texture = ExtResource("9_g2or5")
+
+[node name="Traccion3" type="Sprite2D" parent="CanvasLayer/Node2D"]
+visible = false
+position = Vector2(1145.05, 0)
+texture = ExtResource("10_dbqmk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708
@@ -38,13 +107,6 @@ zoom = Vector2(0.61, 0.61)
 position = Vector2(68, 0)
 rotation = 1.57079
 shape = SubResource("CircleShape2D_ipt4b")
-
-[node name="Area2D" type="Area2D" parent="Detector"]
-position = Vector2(-0.000173259, 78)
-
-[node name="Colision Coche" type="CollisionShape2D" parent="Detector/Area2D"]
-position = Vector2(1.45519e-11, 0)
-shape = SubResource("CapsuleShape2D_3bp1u")
 
 [node name="TiempoGlobal" type="Node" parent="."]
 script = ExtResource("3_1spra")

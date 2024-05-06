@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmn4ql6tgu0eu"]
+
+[ext_resource type="Texture2D" uid="uid://2hgcajnw3saf" path="res://Sprite/Decor/Racing_Lights.png" id="1_g0mtb"]
+[ext_resource type="Texture2D" uid="uid://csdcvqvtmpi6k" path="res://Sprite/Decor/Racing_Lights_ON.png" id="2_8hmt3"]
+[ext_resource type="Script" path="res://Scripts/LucesSalida.gd" id="2_crtvd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kxg1"]
+size = Vector2(1881.34, 164.656)
+
+[node name="SalidaSemaforo" type="Area2D"]
+position = Vector2(726, -18)
+rotation = -1.57079
+scale = Vector2(0.327957, 0.327958)
+script = ExtResource("2_crtvd")
+
+[node name="RedLight" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-0.000496084, -79.2784)
+texture = ExtResource("2_8hmt3")
+
+[node name="RacingLights" type="Sprite2D" parent="."]
+texture = ExtResource("1_g0mtb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.52435, 9.1499)
+shape = SubResource("RectangleShape2D_0kxg1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

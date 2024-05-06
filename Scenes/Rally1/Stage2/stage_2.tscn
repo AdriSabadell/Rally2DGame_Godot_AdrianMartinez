@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://lxmp6r1xy8is"]
+[gd_scene load_steps=18 format=3 uid="uid://lxmp6r1xy8is"]
 
 [ext_resource type="Texture2D" uid="uid://bodmp1x43201o" path="res://Sprite/Decor/Background_Tiles/Grass_Tile.png" id="1_3b3qt"]
 [ext_resource type="Texture2D" uid="uid://dukfevraj882s" path="res://Sprite/Road_01/Road_01_Tile_04/Road_01_Tile_04.png" id="2_0own1"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://de7hsoshn4q8l" path="res://Sprite/Road_01/Road_01_Tile_03/Layers/Road_Main.png" id="13_dvied"]
 [ext_resource type="Texture2D" uid="uid://ciot33nsrftch" path="res://Sprite/Road_01/Road_01_Tile_06/Layers/Road_Main.png" id="14_waor2"]
 [ext_resource type="Texture2D" uid="uid://nyhbu838mlay" path="res://Sprite/Road_01/Road_01_Tile_05/Road_01_Tile_05.png" id="15_gj3uv"]
+[ext_resource type="PackedScene" uid="uid://bmn4ql6tgu0eu" path="res://Scenes/LevelMaker/Elementos Fuera/Luces_Salida.tscn" id="17_trrlm"]
 [ext_resource type="Texture2D" uid="uid://b4i0ysirhhoho" path="res://Sprite/Road_01/Road_01_Tile_01/Road_01_Tile_01.png" id="18_hnnqk"]
 [ext_resource type="PackedScene" uid="uid://b1i8f2qekw4f3" path="res://Scenes/CarPlayer.tscn" id="20_n3hef"]
 [ext_resource type="PackedScene" uid="uid://dvtpw1h37fytx" path="res://Scenes/LevelMaker/Elementos Fuera/salida.tscn" id="21_siyjd"]
@@ -481,3 +482,6 @@ position = Vector2(-599, -8971)
 scale = Vector2(0.319998, 0.319998)
 
 [node name="Coche" parent="." instance=ExtResource("20_n3hef")]
+
+[node name="SalidaSemaforo" parent="." instance=ExtResource("17_trrlm")]
+position = Vector2(461, -5)

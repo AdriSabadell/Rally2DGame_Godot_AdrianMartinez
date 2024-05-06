@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://nwe6qibt3inq"]
+
+[ext_resource type="Texture2D" uid="uid://nwhnt0onjdjx" path="res://Sprite/Decor/Tree_01.png" id="1_tjcoh"]
+[ext_resource type="Script" path="res://Scripts/Roca.gd" id="1_uf4yi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5oyxr"]
+radius = 180.447
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ohya1"]
+radius = 162.111
+
+[node name="Arbol" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_uf4yi")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_tjcoh")
+
+[node name="Detector" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_5oyxr")
+debug_color = Color(0.952941, 0, 0.54902, 0.419608)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D"]
+
+[node name="Tronco" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
+shape = SubResource("CircleShape2D_ohya1")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

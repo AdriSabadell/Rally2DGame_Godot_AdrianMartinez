@@ -15,19 +15,25 @@ var traction_slow = 10
 var acceleration = Vector2.ZERO
 var steer_direction
 
-#var tiempo_actual = 0
+
 var vuelta = false 
 
-@onready var time_text : Label = get_node("CanvasLayer/Tiempo Etapa")
 
+var damage_level = 0
+
+@onready var time_text : Label = get_node("CanvasLayer/Tiempo Etapa")
+@onready var daños_verde : Sprite2D = get_node("CanvasLayer/Mecanico")
+@onready var daños_naranja : Sprite2D = get_node("CanvasLayer/Mecanico2")
+@onready var daños_rojo : Sprite2D = get_node("CanvasLayer/Mecanico3")
 
 func _process(delta):
 	#print(velocity.length())
+	#print(damage_level)
 	if vuelta == true:
 		vuelta_rapida()
 	#tiempo_vuelta_actual += get_process_delta_time()
 	#print(Global.tiempo_actual)
-	time_text.text = str(Global.tiempo_actual)
+	time_text.text = "%.2f" % Global.tiempo_actual
 	pass
 
 func _physics_process(delta):
@@ -71,45 +77,70 @@ func calculate_steering(delta):
 	rotation = new_heading.angle()
 
 func asfalto():
-	print("Asfalto")
-	
-	engine_power = 1300
-	friction = -0.54
-	drag = -0.06
-	braking = -770
-	max_speed_reverse = 400
-	slip_speed = 570
-	traction_fast = 4
-	traction_slow = 10
+	if damage_level == 0:
+		print("Asfalto")
+		engine_power = 1400
+		friction = -0.54
+		drag = -0.06
+		braking = -770
+		max_speed_reverse = 400
+		slip_speed = 570
+		traction_fast = 5
+		traction_slow = 10
+	if damage_level == 1:
+		print("Asfalto")
+		engine_power = 1000
+		friction = -0.54
+		drag = -0.06
+		braking = -650
+		max_speed_reverse = 350
+		slip_speed = 400
+		traction_fast = 3
+		traction_slow = 7
+		
+	if damage_level > 1:
+		print("Asfalto")
+		engine_power = 600
+		friction = -0.54
+		drag = -0.06
+		braking = -500
+		max_speed_reverse = 300
+		slip_speed = 300
+		traction_fast = 1
+		traction_slow = 5
 	
 func tierra():
-	print("Tierra")
-	engine_power = 1250
-	friction = -0.54
-	drag = -0.06
-	braking = -770
-	max_speed_reverse = 350
-	slip_speed = 300
-	traction_fast = 2
-	traction_slow = 5
+		print("Tierra")
+		engine_power = 1250
+		friction = -0.50
+		drag = -0.06
+		braking = -770
+		max_speed_reverse = 350
+		slip_speed = 300
+		traction_fast = 2
+		traction_slow = 5
 	
 	
 func hierba():
-	print("Hierba")
-	engine_power = 300
-	friction = -0.54
-	drag = -0.06
-	braking = -770
-	max_speed_reverse = 250
-	slip_speed = 200
-	traction_fast = 1
-	traction_slow = 4
+		print("Hierba")
+		engine_power = 300
+		friction = -0.54
+		drag = -0.06
+		braking = -770
+		max_speed_reverse = 250
+		slip_speed = 200
+		traction_fast = 1
+		traction_slow = 4
 	 
 func choque():
 	#print("Choque")
 	print(velocity.length())
-	if velocity.length() > 400:
-		print("Daños grabes")
+	if velocity.length() > 500:
+		damage_level = damage_level + 1
+	if damage_level == 1:
+		daños_naranja.visible = true
+	if damage_level == 2:
+		daños_rojo.visible = true
 
 func empiezaEtapa():
 	vuelta = true
@@ -119,4 +150,6 @@ func vuelta_rapida():
 	
 func finalEtapa():
 	vuelta = false 
-	get_tree().change_scene_to_file("res://Scenes/test_scene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Rally1/Stage2/stage_2.tscn")
+func penalizacion():
+	Global.tiempo_actual += 5
