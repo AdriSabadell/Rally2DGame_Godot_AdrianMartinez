@@ -375,6 +375,10 @@ position = Vector2(2028, 1291)
 position = Vector2(1142, 1719)
 rotation = 1.0472
 
+[node name="Arbol21" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(1036, 1196)
+rotation = 2.35619
+
 [node name="Arbol3" parent="Arboles" instance=ExtResource("24_kx2x0")]
 position = Vector2(2106, 2139)
 rotation = 2.35619
@@ -432,7 +436,7 @@ position = Vector2(8500, 1398)
 rotation = 9.16296
 
 [node name="Arbol11" parent="Arboles" instance=ExtResource("24_kx2x0")]
-position = Vector2(8607, 603)
+position = Vector2(10608, -61)
 rotation = 9.42476
 
 [node name="Arbol12" parent="Arboles" instance=ExtResource("24_kx2x0")]
@@ -446,6 +450,22 @@ rotation = 7.33037
 [node name="Arbol19" parent="Arboles" instance=ExtResource("24_kx2x0")]
 position = Vector2(6984, -523)
 rotation = 4.97418
+
+[node name="Arbol22" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(8336, -620)
+rotation = 6.54498
+
+[node name="Arbol23" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(1878, 372)
+rotation = 7.85397
+
+[node name="Arbol24" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(2938, 1400)
+rotation = 8.37757
+
+[node name="Arbol25" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(8416, 602)
+rotation = 10.2102
 
 [node name="Publico" type="Node2D" parent="."]
 position = Vector2(3072, 2378)

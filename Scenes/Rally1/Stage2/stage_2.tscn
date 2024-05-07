@@ -299,12 +299,12 @@ position = Vector2(-1441, -10545)
 texture = ExtResource("3_exmse")
 
 [node name="RoadMain5" type="Sprite2D" parent="Suelos"]
-position = Vector2(-600, -11057)
+position = Vector2(-599, -11052)
 rotation = 1.5708
 texture = ExtResource("13_dvied")
 
 [node name="RoadMain8" type="Sprite2D" parent="Suelos"]
-position = Vector2(-600, -11561)
+position = Vector2(-599, -11556)
 rotation = 1.5708
 texture = ExtResource("13_dvied")
 

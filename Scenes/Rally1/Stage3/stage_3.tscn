@@ -143,6 +143,12 @@ texture = ExtResource("8_pe8fh")
 position = Vector2(8611.5, -2385)
 rotation = -3.14159
 texture = ExtResource("10_qytye")
+flip_h = true
+
+[node name="RoadMain41" type="Sprite2D" parent="Suelos"]
+position = Vector2(11163, -354)
+rotation = -3.14159
+texture = ExtResource("10_qytye")
 
 [node name="RoadMain17" type="Sprite2D" parent="Suelos"]
 position = Vector2(9121.5, -2385)
@@ -156,7 +162,9 @@ texture = ExtResource("7_n2y4j")
 
 [node name="DeAsfaltoATierra3" type="Sprite2D" parent="Suelos"]
 position = Vector2(10654.5, -355)
+rotation = -3.14159
 texture = ExtResource("7_n2y4j")
+flip_h = true
 
 [node name="Road01Tile07" type="Sprite2D" parent="Suelos"]
 position = Vector2(10143.5, -2384)
