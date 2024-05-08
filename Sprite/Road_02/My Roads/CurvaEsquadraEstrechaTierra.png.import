@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jbhape4t0pj8"
-path="res://.godot/imported/RectaTierra.png-ea95880f1670a5685c2eef4fee16b84a.ctex"
+uid="uid://ct2tcqkwfa5xt"
+path="res://.godot/imported/CurvaEsquadraEstrechaTierra.png-0efb74cf1a3552bf4842b9950f600dde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Road_02/My Roads/RectaTierra.png"
-dest_files=["res://.godot/imported/RectaTierra.png-ea95880f1670a5685c2eef4fee16b84a.ctex"]
+source_file="res://Sprite/Road_02/My Roads/CurvaEsquadraEstrechaTierra.png"
+dest_files=["res://.godot/imported/CurvaEsquadraEstrechaTierra.png-0efb74cf1a3552bf4842b9950f600dde.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c3q16uqp0fif0"]
+[gd_scene load_steps=18 format=3 uid="uid://c3q16uqp0fif0"]
 
 [ext_resource type="Texture2D" uid="uid://bodmp1x43201o" path="res://Sprite/Decor/Background_Tiles/Grass_Tile.png" id="1_r7ada"]
 [ext_resource type="Texture2D" uid="uid://dukfevraj882s" path="res://Sprite/Road_01/Road_01_Tile_04/Road_01_Tile_04.png" id="2_0ecra"]
@@ -12,7 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://nyhbu838mlay" path="res://Sprite/Road_01/Road_01_Tile_05/Road_01_Tile_05.png" id="12_fjptw"]
 [ext_resource type="Texture2D" uid="uid://c1cw614jgg8kj" path="res://Sprite/Road_02/Road_02_Tile_02/Layers/Road_Main.png" id="13_wtej6"]
 [ext_resource type="PackedScene" uid="uid://dvtpw1h37fytx" path="res://Scenes/LevelMaker/Elementos Fuera/salida.tscn" id="14_k4sjf"]
+[ext_resource type="Texture2D" uid="uid://jbhape4t0pj8" path="res://Sprite/Road_02/My Roads/RectaTierra.png" id="15_1b864"]
+[ext_resource type="Texture2D" uid="uid://fuw3quaylrfg" path="res://Sprite/Road_02/My Roads/CurvaEstrechaTierra.png" id="16_gd7rl"]
 [ext_resource type="PackedScene" uid="uid://b1i8f2qekw4f3" path="res://Scenes/CarPlayer.tscn" id="16_gnuxq"]
+[ext_resource type="Texture2D" uid="uid://ct2tcqkwfa5xt" path="res://Sprite/Road_02/My Roads/CurvaEsquadraEstrechaTierra.png" id="17_o6qj1"]
 [ext_resource type="PackedScene" uid="uid://bmn4ql6tgu0eu" path="res://Scenes/LevelMaker/Elementos Fuera/Luces_Salida.tscn" id="17_wyeee"]
 
 [node name="Stage2" type="Node2D"]
@@ -274,6 +277,159 @@ flip_h = true
 position = Vector2(7269, -3219)
 rotation = 3.14159
 texture = ExtResource("9_xdvly")
+
+[node name="RectaTierra" type="Sprite2D" parent="Suelos"]
+position = Vector2(12153, -366)
+texture = ExtResource("15_1b864")
+
+[node name="RectaTierra9" type="Sprite2D" parent="Suelos"]
+position = Vector2(14393, -814)
+texture = ExtResource("15_1b864")
+
+[node name="RectaTierra10" type="Sprite2D" parent="Suelos"]
+position = Vector2(14901, -814)
+texture = ExtResource("15_1b864")
+
+[node name="RectaTierra11" type="Sprite2D" parent="Suelos"]
+position = Vector2(15410, -814)
+texture = ExtResource("15_1b864")
+
+[node name="RectaTierra13" type="Sprite2D" parent="Suelos"]
+position = Vector2(16157, -231.999)
+rotation = -0.785397
+texture = ExtResource("15_1b864")
+
+[node name="RectaTierra12" type="Sprite2D" parent="Suelos"]
+position = Vector2(15919, -814)
+texture = ExtResource("15_1b864")
+
+[node name="RectaTierra2" type="Sprite2D" parent="Suelos"]
+position = Vector2(12720, 77.0005)
+rotation = -0.785397
+texture = ExtResource("15_1b864")
+
+[node name="RectaTierra3" type="Sprite2D" parent="Suelos"]
+position = Vector2(12358, 439)
+rotation = -0.785397
+texture = ExtResource("15_1b864")
+
+[node name="RectaTierra6" type="Sprite2D" parent="Suelos"]
+position = Vector2(12966, 770)
+rotation = -0.785397
+texture = ExtResource("15_1b864")
+
+[node name="RectaTierra7" type="Sprite2D" parent="Suelos"]
+position = Vector2(13328, 410)
+rotation = -0.785397
+texture = ExtResource("15_1b864")
+
+[node name="RectaTierra4" type="Sprite2D" parent="Suelos"]
+position = Vector2(12250, 1369)
+rotation = -1.57079
+texture = ExtResource("15_1b864")
+
+[node name="RectaTierra5" type="Sprite2D" parent="Suelos"]
+position = Vector2(12717.8, 1373)
+rotation = -1.57079
+scale = Vector2(1, 0.985404)
+texture = ExtResource("15_1b864")
+
+[node name="RectaTierra8" type="Sprite2D" parent="Suelos"]
+position = Vector2(13906, -324)
+rotation = -1.57079
+scale = Vector2(1, 0.985404)
+texture = ExtResource("15_1b864")
+
+[node name="CurvaEstrechaTierra" type="Sprite2D" parent="Suelos"]
+position = Vector2(12557, -387)
+rotation = -1.57079
+texture = ExtResource("16_gd7rl")
+
+[node name="CurvaEstrechaTierra2" type="Sprite2D" parent="Suelos"]
+position = Vector2(12557, -387)
+rotation = -1.57079
+texture = ExtResource("16_gd7rl")
+
+[node name="CurvaEstrechaTierra3" type="Sprite2D" parent="Suelos"]
+position = Vector2(12229, 966)
+rotation = -3.14159
+texture = ExtResource("16_gd7rl")
+
+[node name="CurvaEstrechaTierra4" type="Sprite2D" parent="Suelos"]
+position = Vector2(12694, 1072)
+rotation = -5.49778
+texture = ExtResource("16_gd7rl")
+
+[node name="CurvaEstrechaTierra6" type="Sprite2D" parent="Suelos"]
+position = Vector2(16219.4, -838.797)
+rotation = -3.92699
+scale = Vector2(1.01239, 1.0218)
+texture = ExtResource("16_gd7rl")
+
+[node name="CurvaEstrechaTierra5" type="Sprite2D" parent="Suelos"]
+position = Vector2(13518.9, 186.055)
+rotation = -4.71238
+scale = Vector2(1.00437, 1.02729)
+texture = ExtResource("16_gd7rl")
+
+[node name="CurvaEstrechaTierra7" type="Sprite2D" parent="Suelos"]
+position = Vector2(15522, -142)
+rotation = -3.92699
+scale = Vector2(1.00437, 1.02729)
+texture = ExtResource("16_gd7rl")
+
+[node name="CurvaEsquadraEstrechaTierra" type="Sprite2D" parent="Suelos"]
+position = Vector2(12044, 784)
+rotation = 0.785397
+scale = Vector2(0.999539, 1.01471)
+texture = ExtResource("17_o6qj1")
+
+[node name="CurvaEsquadraEstrechaTierra3" type="Sprite2D" parent="Suelos"]
+position = Vector2(12739, -573)
+rotation = 2.35619
+scale = Vector2(0.999539, 1.01471)
+texture = ExtResource("17_o6qj1")
+
+[node name="CurvaEsquadraEstrechaTierra6" type="Sprite2D" parent="Suelos"]
+position = Vector2(13884, 144)
+rotation = 4.71238
+scale = Vector2(0.999539, 1.01471)
+texture = ExtResource("17_o6qj1")
+
+[node name="CurvaEsquadraEstrechaTierra9" type="Sprite2D" parent="Suelos"]
+position = Vector2(15808, 83.9993)
+rotation = 5.49778
+scale = Vector2(1.00612, 1.02825)
+texture = ExtResource("17_o6qj1")
+
+[node name="CurvaEsquadraEstrechaTierra7" type="Sprite2D" parent="Suelos"]
+position = Vector2(13927, -794)
+rotation = 7.85397
+scale = Vector2(0.999539, 1.01471)
+texture = ExtResource("17_o6qj1")
+
+[node name="CurvaEsquadraEstrechaTierra8" type="Sprite2D" parent="Suelos"]
+position = Vector2(16476.5, -579)
+rotation = 10.2102
+scale = Vector2(1.00447, 1.05024)
+texture = ExtResource("17_o6qj1")
+
+[node name="CurvaEsquadraEstrechaTierra2" type="Sprite2D" parent="Suelos"]
+position = Vector2(13038.6, -269.63)
+rotation = -2.3562
+scale = Vector2(1.00348, 1.03294)
+texture = ExtResource("17_o6qj1")
+
+[node name="CurvaEsquadraEstrechaTierra4" type="Sprite2D" parent="Suelos"]
+position = Vector2(12697, 1842)
+rotation = 4.71238
+scale = Vector2(0.999539, 1.01471)
+texture = ExtResource("17_o6qj1")
+
+[node name="CurvaEsquadraEstrechaTierra5" type="Sprite2D" parent="Suelos"]
+position = Vector2(12270, 1840)
+scale = Vector2(1.00348, 1.03294)
+texture = ExtResource("17_o6qj1")
 
 [node name="Decoracio" type="Node2D" parent="."]
 
