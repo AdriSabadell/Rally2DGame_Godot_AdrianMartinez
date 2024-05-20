@@ -110,17 +110,38 @@ func asfalto():
 		traction_slow = 5
 	
 func tierra():
+	if damage_level == 0:
 		print("Tierra")
-		engine_power = 1250
+		engine_power = 1200
 		friction = -0.50
 		drag = -0.06
-		braking = -770
-		max_speed_reverse = 350
+		braking = -600
+		max_speed_reverse = 250
+		slip_speed = 200
+		traction_fast = 1
+		traction_slow = 4
+		
+	if damage_level == 1:
+		print("Tierra")
+		engine_power = 900
+		friction = -0.50
+		drag = -0.06
+		braking = -500
+		max_speed_reverse = 250
 		slip_speed = 300
+		traction_fast = 1
+		traction_slow = 3
+		
+	if damage_level == 2:
+		print("Tierra")
+		engine_power = 800
+		friction = -0.50
+		drag = -0.06
+		braking = -400
+		max_speed_reverse = 250
+		slip_speed = 150
 		traction_fast = 2
 		traction_slow = 5
-	
-	
 func hierba():
 		print("Hierba")
 		engine_power = 300

@@ -1,7 +1,6 @@
-[gd_scene load_steps=30 format=3 uid="uid://cwrovqqht03de"]
+[gd_scene load_steps=29 format=3 uid="uid://cwrovqqht03de"]
 
 [ext_resource type="Texture2D" uid="uid://dukfevraj882s" path="res://Sprite/Road_01/Road_01_Tile_04/Road_01_Tile_04.png" id="1_jgsxj"]
-[ext_resource type="Texture2D" uid="uid://bodmp1x43201o" path="res://Sprite/Decor/Background_Tiles/Grass_Tile.png" id="1_qla2w"]
 [ext_resource type="Texture2D" uid="uid://c0tjrjwbrqfwu" path="res://Sprite/Road_01/Road_01_Tile_06/Road_01_Tile_06.png" id="2_qt08h"]
 [ext_resource type="Texture2D" uid="uid://ujcoxhrbd03q" path="res://Sprite/Road_01/Road_01_Tile_02/Road_01_Tile_02.png" id="3_gw1yk"]
 [ext_resource type="Texture2D" uid="uid://cu2i01l8cirha" path="res://Sprite/Road_01/Road_01_Tile_04/Layers/Road_Main.png" id="4_auoay"]
@@ -27,25 +26,12 @@
 [ext_resource type="PackedScene" uid="uid://dt3qe1yrdps7m" path="res://Scenes/LevelMaker/Elementos Fuera/Roca.tscn" id="26_qbt8y"]
 [ext_resource type="PackedScene" uid="uid://ckxflgylxl8xi" path="res://Scenes/LevelMaker/Elementos Fuera/zona_publico_2.tscn" id="27_0tfwy"]
 [ext_resource type="PackedScene" uid="uid://bmn4ql6tgu0eu" path="res://Scenes/LevelMaker/Elementos Fuera/Luces_Salida.tscn" id="27_2q8n3"]
+[ext_resource type="Texture2D" uid="uid://dw5d11binqmtw" path="res://Sprite/Trampas/Barreras.png" id="27_outkm"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_srwoy"]
-texture = ExtResource("1_qla2w")
-texture_region_size = Vector2i(512, 512)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_gjm0s"]
-sources/0 = SubResource("TileSetAtlasSource_srwoy")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngufl"]
+size = Vector2(477, 30)
 
 [node name="Stage1" type="Node2D"]
-
-[node name="Fondo" type="Node2D" parent="."]
-
-[node name="TileMap" type="TileMap" parent="Fondo"]
-position = Vector2(-1154, -1506)
-tile_set = SubResource("TileSet_gjm0s")
-rendering_quadrant_size = 128
-format = 2
-layer_0/tile_data = PackedInt32Array(983055, 0, 0, 983087, 0, 0, 983119, 0, 0, 983151, 0, 0, 3080303, 0, 0, 3080271, 0, 0, 3080239, 0, 0, 3080207, 0, 0, 983183, 0, 0, 3080335, 0, 0, 983215, 0, 0, 3080367, 0, 0, 983247, 0, 0, 3080399, 0, 0, -1114097, 0, 0, -1114065, 0, 0, -1114033, 0, 0, -1114001, 0, 0, -1113969, 0, 0, -1113937, 0, 0, -1113905, 0, 0, 983471, 0, 0, 3080623, 0, 0, 983503, 0, 0, 3080655, 0, 0, 983535, 0, 0, 3080687, 0, 0, 5177615, 0, 0, 7274767, 0, 0, 9371919, 0, 0, 11469071, 0, 0, 5177647, 0, 0, 7274799, 0, 0, 9371951, 0, 0, 11469103, 0, 0, 5177679, 0, 0, 7274831, 0, 0, 9371983, 0, 0, 11469135, 0, 0, 5177711, 0, 0, 7274863, 0, 0, 9372015, 0, 0, 11469167, 0, 0, 5177743, 0, 0, 7274895, 0, 0, 9372047, 0, 0, 11469199, 0, 0, 5177775, 0, 0, 7274927, 0, 0, 9372079, 0, 0, 11469231, 0, 0, 5177807, 0, 0, 7274959, 0, 0, 9372111, 0, 0, 11469263, 0, 0, 5177839, 0, 0, 7274991, 0, 0, 9372143, 0, 0, 11469295, 0, 0, 5177359, 0, 0, 7274511, 0, 0, 9371663, 0, 0, 11468815, 0, 0, 5177391, 0, 0, 7274543, 0, 0, 9371695, 0, 0, 11468847, 0, 0, 5177423, 0, 0, 7274575, 0, 0, 9371727, 0, 0, 11468879, 0, 0, 5177455, 0, 0, 7274607, 0, 0, 9371759, 0, 0, 11468911, 0, 0, 5177487, 0, 0, 7274639, 0, 0, 9371791, 0, 0, 11468943, 0, 0, 5177519, 0, 0, 7274671, 0, 0, 9371823, 0, 0, 11468975, 0, 0, 5177551, 0, 0, 7274703, 0, 0, 9371855, 0, 0, 11469007, 0, 0, 5177583, 0, 0, 7274735, 0, 0, 9371887, 0, 0, 11469039, 0, 0, 13565967, 0, 0, 15663119, 0, 0, 17760271, 0, 0, 19857423, 0, 0, 13565999, 0, 0, 15663151, 0, 0, 17760303, 0, 0, 19857455, 0, 0, 13566031, 0, 0, 15663183, 0, 0, 17760335, 0, 0, 19857487, 0, 0, 13566063, 0, 0, 15663215, 0, 0, 17760367, 0, 0, 19857519, 0, 0, 13566095, 0, 0, 15663247, 0, 0, 17760399, 0, 0, 19857551, 0, 0, 13566127, 0, 0, 15663279, 0, 0, 17760431, 0, 0, 19857583, 0, 0, 13566159, 0, 0, 15663311, 0, 0, 17760463, 0, 0, 19857615, 0, 0, 13566191, 0, 0, 15663343, 0, 0, 17760495, 0, 0, 19857647, 0, 0, 13566223, 0, 0, 15663375, 0, 0, 17760527, 0, 0, 19857679, 0, 0, 13566255, 0, 0, 15663407, 0, 0, 17760559, 0, 0, 19857711, 0, 0, 13566287, 0, 0, 15663439, 0, 0, 17760591, 0, 0, 19857743, 0, 0, 13566319, 0, 0, 15663471, 0, 0, 17760623, 0, 0, 19857775, 0, 0, 13566351, 0, 0, 15663503, 0, 0, 17760655, 0, 0, 19857807, 0, 0, 13566383, 0, 0, 15663535, 0, 0, 17760687, 0, 0, 19857839, 0, 0, 13566415, 0, 0, 15663567, 0, 0, 17760719, 0, 0, 19857871, 0, 0, 13566447, 0, 0, 15663599, 0, 0, 17760751, 0, 0, 19857903, 0, 0, 13566479, 0, 0, 15663631, 0, 0, 17760783, 0, 0, 19857935, 0, 0, 13566511, 0, 0, 15663663, 0, 0, 17760815, 0, 0, 19857967, 0, 0, 13566543, 0, 0, 15663695, 0, 0, 17760847, 0, 0, 19857999, 0, 0, 13566575, 0, 0, 15663727, 0, 0, 17760879, 0, 0, 19858031, 0, 0, 13566607, 0, 0, 15663759, 0, 0, 17760911, 0, 0, 19858063, 0, 0, 13566639, 0, 0, 13566671, 0, 0, 13566703, 0, 0, 983567, 0, 0, 3080719, 0, 0, -3210705, 0, 0, -1113553, 0, 0, 983599, 0, 0, 3080751, 0, 0, -3210673, 0, 0, -1113521, 0, 0, 983631, 0, 0, 3080783, 0, 0, -3210641, 0, 0, -1113489, 0, 0, 983663, 0, 0, 3080815, 0, 0, -3210609, 0, 0, -1113457, 0, 0, 983695, 0, 0, 3080847, 0, 0, -3210577, 0, 0, -1113425, 0, 0, 983727, 0, 0, 3080879, 0, 0, -3210545, 0, 0, -1113393, 0, 0, 983759, 0, 0, 3080911, 0, 0, -3210513, 0, 0, -1113361, 0, 0, 983791, 0, 0, 3080943, 0, 0, 5177871, 0, 0, 7275023, 0, 0, 9372175, 0, 0, 11469327, 0, 0, 5177903, 0, 0, 7275055, 0, 0, 9372207, 0, 0, 11469359, 0, 0, 5177935, 0, 0, 7275087, 0, 0, 9372239, 0, 0, 11469391, 0, 0, 5177967, 0, 0, 7275119, 0, 0, 9372271, 0, 0, 11469423, 0, 0, 5177999, 0, 0, 7275151, 0, 0, 9372303, 0, 0, 11469455, 0, 0, 5178031, 0, 0, 7275183, 0, 0, 9372335, 0, 0, 11469487, 0, 0, 5178063, 0, 0, 7275215, 0, 0, 9372367, 0, 0, 11469519, 0, 0, 5178095, 0, 0, 7275247, 0, 0, 9372399, 0, 0, 11469551, 0, 0, -3210482, 0, 0, -1113330, 0, 0, 983822, 0, 0, 3080974, 0, 0, 983854, 0, 0, 3081006, 0, 0, 983886, 0, 0, 3081038, 0, 0, 983918, 0, 0, 3081070, 0, 0, 983950, 0, 0, 3081102, 0, 0, 983982, 0, 0, 3081134, 0, 0, 5178127, 0, 0, 7275279, 0, 0, 9372431, 0, 0, 11469583, 0, 0, 5178159, 0, 0, 7275311, 0, 0, 9372463, 0, 0, 11469615, 0, 0, 5178191, 0, 0, 7275343, 0, 0, 9372495, 0, 0, 11469647, 0, 0, 5178223, 0, 0, 7275375, 0, 0, 9372527, 0, 0, 11469679, 0, 0, 5178255, 0, 0, 7275407, 0, 0, 9372559, 0, 0, 11469711, 0, 0, 5178287, 0, 0, 7275439, 0, 0, 9372591, 0, 0, 11469743, 0, 0, 13566735, 0, 0, 13566767, 0, 0, 13566799, 0, 0, 13566831, 0, 0, 13566863, 0, 0, 13566895, 0, 0, -5307857, 0, 0, -5307825, 0, 0, -5307793, 0, 0, -5307761, 0, 0, -5307729, 0, 0, -5307697, 0, 0, -5307665, 0, 0, -5307634, 0, 0, -7405009, 0, 0, -7404977, 0, 0, -7404945, 0, 0, -7404913, 0, 0, -7404881, 0, 0, -7404849, 0, 0, -7404817, 0, 0, -7404786, 0, 0)
 
 [node name="Suelos" type="Node2D" parent="."]
 
@@ -356,7 +342,7 @@ position = Vector2(7707, 2398)
 rotation = -1.83259
 
 [node name="Roca3" parent="Rocas" instance=ExtResource("26_qbt8y")]
-position = Vector2(7868, -486)
+position = Vector2(7899, -436)
 
 [node name="Roca5" parent="Rocas" instance=ExtResource("26_qbt8y")]
 position = Vector2(6885, 1419)
@@ -371,6 +357,25 @@ rotation = -2.61799
 [node name="Arbol" parent="Arboles" instance=ExtResource("24_kx2x0")]
 position = Vector2(2028, 1291)
 
+[node name="Arbol35" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(2032, 1751)
+rotation = 3.14159
+
+[node name="Arbol31" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(2176, 807)
+
+[node name="Arbol32" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(2372, 315)
+rotation = 2.35619
+
+[node name="Arbol34" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(2548, 1091)
+rotation = 2.35619
+
+[node name="Arbol33" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(2256, -149)
+rotation = 1.57079
+
 [node name="Arbol2" parent="Arboles" instance=ExtResource("24_kx2x0")]
 position = Vector2(1142, 1719)
 rotation = 1.0472
@@ -380,7 +385,7 @@ position = Vector2(1036, 1196)
 rotation = 2.35619
 
 [node name="Arbol3" parent="Arboles" instance=ExtResource("24_kx2x0")]
-position = Vector2(2106, 2139)
+position = Vector2(2094, 2203)
 rotation = 2.35619
 
 [node name="Arbol4" parent="Arboles" instance=ExtResource("24_kx2x0")]
@@ -459,13 +464,51 @@ rotation = 6.54498
 position = Vector2(1878, 372)
 rotation = 7.85397
 
+[node name="ZonaPublico1" parent="Arboles" instance=ExtResource("27_0tfwy")]
+position = Vector2(279, -532)
+
+[node name="ZonaPublico2" parent="Arboles" instance=ExtResource("27_0tfwy")]
+position = Vector2(-403, -524)
+
+[node name="ZonaPublico3" parent="Arboles" instance=ExtResource("27_0tfwy")]
+position = Vector2(616, 508)
+rotation = 3.14159
+
+[node name="ZonaPublico4" parent="Arboles" instance=ExtResource("27_0tfwy")]
+position = Vector2(-90, 516)
+rotation = 3.14159
+
+[node name="ZonaPublico5" parent="Arboles" instance=ExtResource("27_0tfwy")]
+position = Vector2(-770, 518)
+rotation = 3.14159
+
+[node name="Arbol27" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(1751, -143)
+rotation = 9.42476
+
+[node name="Arbol28" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(1386, -477)
+rotation = 9.42476
+
+[node name="Arbol29" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(868, -539)
+rotation = 9.42476
+
+[node name="Arbol30" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(959, 756)
+rotation = 9.42476
+
 [node name="Arbol24" parent="Arboles" instance=ExtResource("24_kx2x0")]
 position = Vector2(2938, 1400)
 rotation = 8.37757
 
 [node name="Arbol25" parent="Arboles" instance=ExtResource("24_kx2x0")]
-position = Vector2(8416, 602)
+position = Vector2(8376, 392)
 rotation = 10.2102
+
+[node name="Arbol26" parent="Arboles" instance=ExtResource("24_kx2x0")]
+position = Vector2(8649, 907)
+rotation = 10.9956
 
 [node name="Publico" type="Node2D" parent="."]
 position = Vector2(3072, 2378)
@@ -491,6 +534,66 @@ rotation = -2.3562
 
 [node name="SalidaSemaforo" parent="." instance=ExtResource("27_2q8n3")]
 position = Vector2(458, -18)
+
+[node name="Limite1" type="Node2D" parent="."]
+
+[node name="Barreras" type="Sprite2D" parent="Limite1"]
+position = Vector2(7756, 169)
+texture = ExtResource("27_outkm")
+
+[node name="Barreras2" type="Sprite2D" parent="Limite1"]
+position = Vector2(7884, 169)
+texture = ExtResource("27_outkm")
+
+[node name="Barreras3" type="Sprite2D" parent="Limite1"]
+position = Vector2(8004, 169)
+texture = ExtResource("27_outkm")
+
+[node name="Barreras4" type="Sprite2D" parent="Limite1"]
+position = Vector2(8129, 169)
+texture = ExtResource("27_outkm")
+
+[node name="Barreras5" type="Sprite2D" parent="Limite1"]
+position = Vector2(8129, 169)
+texture = ExtResource("27_outkm")
+
+[node name="Barreras6" type="Sprite2D" parent="Limite1"]
+position = Vector2(7178, 57.9999)
+rotation = -1.57079
+texture = ExtResource("27_outkm")
+
+[node name="Barreras7" type="Sprite2D" parent="Limite1"]
+position = Vector2(7205, -80)
+rotation = -1.0472
+texture = ExtResource("27_outkm")
+
+[node name="Barreras8" type="Sprite2D" parent="Limite1"]
+position = Vector2(7288, -189)
+rotation = -0.785397
+texture = ExtResource("27_outkm")
+
+[node name="Barreras9" type="Sprite2D" parent="Limite1"]
+position = Vector2(7402, -276)
+rotation = -0.523598
+texture = ExtResource("27_outkm")
+
+[node name="Barreras10" type="Sprite2D" parent="Limite1"]
+position = Vector2(7525, -317)
+rotation = -0.261799
+texture = ExtResource("27_outkm")
+
+[node name="Barreras11" type="Sprite2D" parent="Limite1"]
+position = Vector2(7659, -336)
+texture = ExtResource("27_outkm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Limite1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limite1/StaticBody2D"]
+position = Vector2(7941.5, 169)
+shape = SubResource("RectangleShape2D_ngufl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limite1/StaticBody2D/CollisionShape2D"]
+polygon = PackedVector2Array(-745.5, -59, -745.5, -201, -673.5, -316, -569.5, -409, -488.5, -459, -454.5, -458, -364.5, -483, -227.5, -488, -227.5, -521, -345.5, -523, -585.5, -469, -750.5, -321, -808.5, -164, -788.5, -55)
 
 [connection signal="body_entered" from="Hierba" to="Coche" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Hierba" to="Hierba" method="_on_body_entered"]

@@ -1,12 +1,171 @@
-[gd_scene load_steps=2 format=3 uid="uid://co18s0lrj2i3d"]
+[gd_scene load_steps=11 format=3 uid="uid://co18s0lrj2i3d"]
 
 [ext_resource type="Script" path="res://Scripts/Marcadores.gd" id="1_lpprv"]
+[ext_resource type="Texture2D" uid="uid://cn4s1l4vdhpy2" path="res://Sprite/Banderas/Spain.png" id="2_ym4ks"]
+[ext_resource type="Texture2D" uid="uid://ha0krsxd87mi" path="res://Sprite/Banderas/Rudia.png" id="3_o1l0m"]
+[ext_resource type="Texture2D" uid="uid://d3tgswl13lotg" path="res://Sprite/Banderas/China.png" id="4_c2h7u"]
+[ext_resource type="Texture2D" uid="uid://b7hhl8gqk0ojs" path="res://Sprite/Banderas/Usa.png" id="5_r45et"]
+[ext_resource type="Texture2D" uid="uid://lto4yasvlav3" path="res://Sprite/Banderas/Brazil.png" id="6_4rnak"]
+[ext_resource type="Texture2D" uid="uid://d1vkeh0n1fuxg" path="res://Sprite/Banderas/Japan.png" id="7_b6nwj"]
+[ext_resource type="Texture2D" uid="uid://by8phvx874w7m" path="res://Sprite/Banderas/Alemania.png" id="8_ue24u"]
+[ext_resource type="Texture2D" uid="uid://c57765w6kt3sl" path="res://Sprite/Banderas/Italia.png" id="9_noxmk"]
+[ext_resource type="Texture2D" uid="uid://chohjk2k2xg42" path="res://Sprite/Banderas/Francia.png" id="10_k8upi"]
 
 [node name="MenuMarcador" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+
+[node name="Carlos" type="Label" parent="CanvasLayer/Node2D"]
+offset_left = 166.0
+offset_top = 195.0
+offset_right = 372.0
+offset_bottom = 231.0
+theme_override_font_sizes/font_size = 26
+text = "3.Carlos Olmedo"
+script = ExtResource("1_lpprv")
+
+[node name="Spain" type="Sprite2D" parent="CanvasLayer/Node2D/Carlos"]
+position = Vector2(236, 20)
+scale = Vector2(0.228571, 0.228571)
+texture = ExtResource("2_ym4ks")
+
+[node name="Ivann" type="Label" parent="CanvasLayer/Node2D"]
+offset_left = 169.0
+offset_top = 146.0
+offset_right = 378.0
+offset_bottom = 182.0
+theme_override_font_sizes/font_size = 26
+text = "2. Ivan Petrovich"
+script = ExtResource("1_lpprv")
+
+[node name="Rusia" type="Sprite2D" parent="CanvasLayer/Node2D/Ivann"]
+position = Vector2(238, 20)
+scale = Vector2(0.228571, 0.228571)
+texture = ExtResource("3_o1l0m")
+
+[node name="Shan" type="Label" parent="CanvasLayer/Node2D"]
+offset_left = 168.0
+offset_top = 101.0
+offset_right = 374.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 26
+text = "1.Shàn Míng"
+script = ExtResource("1_lpprv")
+
+[node name="China" type="Sprite2D" parent="CanvasLayer/Node2D/Shan"]
+position = Vector2(236, 20)
+scale = Vector2(0.236508, 0.228571)
+texture = ExtResource("4_c2h7u")
+
+[node name="James" type="Label" parent="CanvasLayer/Node2D"]
+offset_left = 166.0
+offset_top = 244.0
+offset_right = 372.0
+offset_bottom = 280.0
+theme_override_font_sizes/font_size = 26
+text = "4.James Allen"
+script = ExtResource("1_lpprv")
+
+[node name="Usa" type="Sprite2D" parent="CanvasLayer/Node2D/James"]
+position = Vector2(237, 22)
+scale = Vector2(0.228571, 0.228571)
+texture = ExtResource("5_r45et")
+
+[node name="Joao" type="Label" parent="CanvasLayer/Node2D"]
+offset_left = 166.0
+offset_top = 290.0
+offset_right = 372.0
+offset_bottom = 326.0
+theme_override_font_sizes/font_size = 26
+text = "5.João Silva"
+script = ExtResource("1_lpprv")
+
+[node name="Brazil" type="Sprite2D" parent="CanvasLayer/Node2D/Joao"]
+position = Vector2(237, 22)
+scale = Vector2(0.228571, 0.228571)
+texture = ExtResource("6_4rnak")
+
+[node name="Hiroshy" type="Label" parent="CanvasLayer/Node2D"]
+offset_left = 166.0
+offset_top = 339.0
+offset_right = 372.0
+offset_bottom = 375.0
+theme_override_font_sizes/font_size = 26
+text = "6.Hiroshi Yama"
+script = ExtResource("1_lpprv")
+
+[node name="Japan" type="Sprite2D" parent="CanvasLayer/Node2D/Hiroshy"]
+position = Vector2(237, 19)
+scale = Vector2(0.228571, 0.228571)
+texture = ExtResource("7_b6nwj")
+
+[node name="Hans" type="Label" parent="CanvasLayer/Node2D"]
+offset_left = 166.0
+offset_top = 379.0
+offset_right = 372.0
+offset_bottom = 415.0
+theme_override_font_sizes/font_size = 26
+text = "7.Hans Müller"
+script = ExtResource("1_lpprv")
+
+[node name="Germany" type="Sprite2D" parent="CanvasLayer/Node2D/Hans"]
+position = Vector2(237, 18)
+scale = Vector2(0.228571, 0.228571)
+texture = ExtResource("8_ue24u")
+
+[node name="Gino" type="Label" parent="CanvasLayer/Node2D"]
+offset_left = 166.0
+offset_top = 423.0
+offset_right = 372.0
+offset_bottom = 459.0
+theme_override_font_sizes/font_size = 26
+text = "8.Gino Conti"
+script = ExtResource("1_lpprv")
+
+[node name="Italy" type="Sprite2D" parent="CanvasLayer/Node2D/Gino"]
+position = Vector2(237, 18)
+scale = Vector2(0.228571, 0.228571)
+texture = ExtResource("9_noxmk")
+
+[node name="Pierre" type="Label" parent="CanvasLayer/Node2D"]
+offset_left = 166.0
+offset_top = 473.0
+offset_right = 372.0
+offset_bottom = 509.0
+theme_override_font_sizes/font_size = 26
+text = "9.Pierre Goudu"
+script = ExtResource("1_lpprv")
+
+[node name="France" type="Sprite2D" parent="CanvasLayer/Node2D/Pierre"]
+position = Vector2(237, 18)
+scale = Vector2(0.228571, 0.228571)
+texture = ExtResource("10_k8upi")
+
+[node name="Pierre2" type="Label" parent="CanvasLayer/Node2D"]
+offset_left = 246.0
+offset_top = 54.0
+offset_right = 330.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 26
+text = "NAME"
+script = ExtResource("1_lpprv")
+
+[node name="Pierre3" type="Label" parent="CanvasLayer/Node2D"]
+offset_left = 537.0
+offset_top = 52.0
+offset_right = 687.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 26
+text = "TOTAL TIME"
+script = ExtResource("1_lpprv")
+
+[node name="Pierre4" type="Label" parent="CanvasLayer/Node2D"]
+offset_left = 889.0
+offset_top = 52.0
+offset_right = 1039.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 26
+text = "YOUR TIME"
 script = ExtResource("1_lpprv")
