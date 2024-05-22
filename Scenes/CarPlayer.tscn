@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1i8f2qekw4f3"]
+[gd_scene load_steps=15 format=3 uid="uid://b1i8f2qekw4f3"]
 
 [ext_resource type="Texture2D" uid="uid://c2314o8flkaot" path="res://Sprite/RallyPlayer.png" id="1_3rpsu"]
 [ext_resource type="Script" path="res://Scripts/CarPlayer.gd" id="1_be3sm"]
@@ -6,12 +6,13 @@
 [ext_resource type="Script" path="res://Scripts/Global.gd" id="3_1spra"]
 [ext_resource type="Texture2D" uid="uid://c0hedw4x3dio7" path="res://Sprite/Icons/mechanic-garage (1).png" id="3_jt738"]
 [ext_resource type="Texture2D" uid="uid://oaixyo1ccihf" path="res://Sprite/Icons/mechanic-garage (2).png" id="4_ktb8u"]
-[ext_resource type="Texture2D" uid="uid://c3u1e2u407vwr" path="res://Sprite/PaceNotes/Horquilla.png" id="6_a7ups"]
-[ext_resource type="Texture2D" uid="uid://yrxmuxqk2h6f" path="res://Sprite/PaceNotes/Recta.png" id="6_k7gbw"]
-[ext_resource type="Texture2D" uid="uid://ctdbj6sqwrks2" path="res://Sprite/PaceNotes/GiroMedioDER.png" id="7_ukha6"]
-[ext_resource type="Texture2D" uid="uid://bmjqhp77ogphc" path="res://Sprite/PaceNotes/Girocerrado.png" id="8_uvpqy"]
-[ext_resource type="Texture2D" uid="uid://qrgiw6a53nly" path="res://Sprite/PaceNotes/Estrechamiento.png" id="9_o3hrb"]
-[ext_resource type="Texture2D" uid="uid://c36p24wrbws60" path="res://Sprite/PaceNotes/EstrechamientoPeligroso.png" id="10_hpam0"]
+[ext_resource type="Texture2D" uid="uid://e1jt567b6bkx" path="res://Sprite/PaceNotes2/Recta.png" id="5_fxj6p"]
+[ext_resource type="Texture2D" uid="uid://p5d53noimei1" path="res://Sprite/PaceNotes2/Horquilla.png" id="6_igoh2"]
+[ext_resource type="Texture2D" uid="uid://6w22d4qyfq2" path="res://Sprite/PaceNotes2/GiroMedioDER.png" id="7_jds4l"]
+[ext_resource type="Texture2D" uid="uid://k4dm6jgyc76m" path="res://Sprite/PaceNotes2/Girocerrado.png" id="8_jtokd"]
+[ext_resource type="Texture2D" uid="uid://lqlh4472ls2m" path="res://Sprite/PaceNotes2/Estrechamiento.png" id="9_oskgu"]
+[ext_resource type="Texture2D" uid="uid://5tanlu63fddj" path="res://Sprite/PaceNotes2/EstrechamientoPeligroso.png" id="10_sa762"]
+[ext_resource type="AudioStream" uid="uid://201ldunjbvo" path="res://Music&Sound/MaxVelocity.wav" id="13_xh80g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ipt4b"]
 radius = 5.0
@@ -52,41 +53,43 @@ texture = ExtResource("4_ktb8u")
 [node name="Recta" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(573, 73)
 scale = Vector2(0.144444, 0.144444)
-texture = ExtResource("6_k7gbw")
+texture = ExtResource("5_fxj6p")
 
 [node name="Horquilla" type="Sprite2D" parent="CanvasLayer"]
+visible = false
 position = Vector2(573, 73)
 scale = Vector2(0.144444, 0.144444)
-texture = ExtResource("6_a7ups")
+texture = ExtResource("6_igoh2")
 
 [node name="Horquilla2" type="Sprite2D" parent="CanvasLayer"]
+visible = false
 position = Vector2(573, 73)
 scale = Vector2(0.144444, 0.144444)
-texture = ExtResource("6_a7ups")
+texture = ExtResource("6_igoh2")
 
 [node name="GiroMedio" type="Sprite2D" parent="CanvasLayer"]
 visible = false
 position = Vector2(573, 73)
 scale = Vector2(0.144444, 0.144444)
-texture = ExtResource("7_ukha6")
+texture = ExtResource("7_jds4l")
 
 [node name="GiroCerrado" type="Sprite2D" parent="CanvasLayer"]
 visible = false
 position = Vector2(573, 73)
 scale = Vector2(0.144444, 0.144444)
-texture = ExtResource("8_uvpqy")
+texture = ExtResource("8_jtokd")
 
 [node name="Estrechamiento" type="Sprite2D" parent="CanvasLayer"]
 visible = false
 position = Vector2(573, 73)
 scale = Vector2(0.144444, 0.144444)
-texture = ExtResource("9_o3hrb")
+texture = ExtResource("9_oskgu")
 
 [node name="EstrechamientoPeligroso" type="Sprite2D" parent="CanvasLayer"]
 visible = false
 position = Vector2(573, 73)
 scale = Vector2(0.144444, 0.144444)
-texture = ExtResource("10_hpam0")
+texture = ExtResource("10_sa762")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708
@@ -102,3 +105,6 @@ shape = SubResource("CircleShape2D_ipt4b")
 
 [node name="TiempoGlobal" type="Node" parent="."]
 script = ExtResource("3_1spra")
+
+[node name="MaximumVelocity" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_xh80g")

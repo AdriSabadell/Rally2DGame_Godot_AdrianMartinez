@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cwrovqqht03de"]
+[gd_scene load_steps=30 format=3 uid="uid://cwrovqqht03de"]
 
 [ext_resource type="Texture2D" uid="uid://dukfevraj882s" path="res://Sprite/Road_01/Road_01_Tile_04/Road_01_Tile_04.png" id="1_jgsxj"]
 [ext_resource type="Texture2D" uid="uid://c0tjrjwbrqfwu" path="res://Sprite/Road_01/Road_01_Tile_06/Road_01_Tile_06.png" id="2_qt08h"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://ckxflgylxl8xi" path="res://Scenes/LevelMaker/Elementos Fuera/zona_publico_2.tscn" id="27_0tfwy"]
 [ext_resource type="PackedScene" uid="uid://bmn4ql6tgu0eu" path="res://Scenes/LevelMaker/Elementos Fuera/Luces_Salida.tscn" id="27_2q8n3"]
 [ext_resource type="Texture2D" uid="uid://dw5d11binqmtw" path="res://Sprite/Trampas/Barreras.png" id="27_outkm"]
+[ext_resource type="PackedScene" uid="uid://cpn4qhfnyodyf" path="res://Scenes/pace_notes.tscn" id="28_rm1e7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ngufl"]
 size = Vector2(477, 30)
@@ -594,6 +595,12 @@ shape = SubResource("RectangleShape2D_ngufl")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limite1/StaticBody2D/CollisionShape2D"]
 polygon = PackedVector2Array(-745.5, -59, -745.5, -201, -673.5, -316, -569.5, -409, -488.5, -459, -454.5, -458, -364.5, -483, -227.5, -488, -227.5, -521, -345.5, -523, -585.5, -469, -750.5, -321, -808.5, -164, -788.5, -55)
+
+[node name="Node2D" type="Node2D" parent="."]
+rotation = 1.57079
+
+[node name="PaceNotes" parent="Node2D" instance=ExtResource("28_rm1e7")]
+position = Vector2(3.00153, -689)
 
 [connection signal="body_entered" from="Hierba" to="Coche" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Hierba" to="Hierba" method="_on_body_entered"]

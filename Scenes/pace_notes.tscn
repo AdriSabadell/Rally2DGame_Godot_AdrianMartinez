@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpn4qhfnyodyf"]
+
+[ext_resource type="Script" path="res://Scripts/PaceNotes/Estrechamiento.gd" id="1_qnheh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7rg8"]
+size = Vector2(815.25, 38.5)
+
+[node name="PaceNotes" type="Area2D" groups=["nota1"]]
+script = ExtResource("1_qnheh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_f7rg8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

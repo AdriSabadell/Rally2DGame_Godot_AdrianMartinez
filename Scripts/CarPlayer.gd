@@ -15,9 +15,7 @@ var traction_slow = 10
 var acceleration = Vector2.ZERO
 var steer_direction
 
-
 var vuelta = false 
-
 
 var damage_level = 0
 
@@ -50,7 +48,8 @@ func apply_friction(delta):
 	var friction_force = velocity * friction * delta
 	var drag_force = velocity * velocity.length() * drag * delta
 	acceleration += drag_force + friction_force
-	
+	if velocity.length() > 300:
+		pass
 func get_input():
 	var turn = Input.get_axis("steer_left", "steer_right")
 	steer_direction = turn * deg_to_rad(steering_angle)
@@ -87,6 +86,7 @@ func asfalto():
 		slip_speed = 570
 		traction_fast = 5
 		traction_slow = 10
+
 	if damage_level == 1:
 		print("Asfalto")
 		engine_power = 1000
@@ -117,7 +117,7 @@ func tierra():
 		drag = -0.06
 		braking = -600
 		max_speed_reverse = 250
-		slip_speed = 200
+		slip_speed = 400
 		traction_fast = 1
 		traction_slow = 4
 		
@@ -163,6 +163,7 @@ func choque():
 	if damage_level == 2:
 		daños_rojo.visible = true
 
+
 func empiezaEtapa():
 	vuelta = true
 	
@@ -174,3 +175,5 @@ func finalEtapa():
 	get_tree().change_scene_to_file("res://Scenes/Rally1/Stage2/stage_2.tscn")
 func penalizacion():
 	Global.tiempo_actual += 5
+
+
