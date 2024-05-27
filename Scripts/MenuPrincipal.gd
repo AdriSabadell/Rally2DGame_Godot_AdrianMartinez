@@ -13,3 +13,7 @@ func _process(delta):
 
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Rally1/Stage1/stage_1.tscn")
+
+
+func _on_exit_pressed():
+	get_tree().quit()

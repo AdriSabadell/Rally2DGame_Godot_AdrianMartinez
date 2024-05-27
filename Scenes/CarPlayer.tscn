@@ -24,10 +24,10 @@ script = ExtResource("1_be3sm")
 layer = 5
 
 [node name="Tiempo Etapa" type="Label" parent="CanvasLayer"]
-offset_left = 844.0
-offset_top = 5.0
-offset_right = 1235.0
-offset_bottom = 266.0
+offset_left = 809.0
+offset_top = 2.0
+offset_right = 1200.0
+offset_bottom = 263.0
 theme_override_font_sizes/font_size = 86
 text = "0
 "

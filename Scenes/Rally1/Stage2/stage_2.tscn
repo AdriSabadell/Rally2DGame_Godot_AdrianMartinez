@@ -1,9 +1,15 @@
-[gd_scene load_steps=22 format=3 uid="uid://lxmp6r1xy8is"]
+[gd_scene load_steps=32 format=3 uid="uid://lxmp6r1xy8is"]
 
 [ext_resource type="Texture2D" uid="uid://bodmp1x43201o" path="res://Sprite/Decor/Background_Tiles/Grass_Tile.png" id="1_bqy6n"]
 [ext_resource type="Texture2D" uid="uid://dukfevraj882s" path="res://Sprite/Road_01/Road_01_Tile_04/Road_01_Tile_04.png" id="2_0own1"]
+[ext_resource type="Texture2D" uid="uid://u04yavtcyuik" path="res://Sprite/Decor/Background_Tiles/GrassWater_Tile.png" id="2_ihvjs"]
 [ext_resource type="Texture2D" uid="uid://bhu2ojuqdr87l" path="res://Sprite/Road_01/MyRoads/Estrecho/Estrechamiento mediano.png" id="3_exmse"]
+[ext_resource type="Texture2D" uid="uid://0vt7hka36qyp" path="res://Sprite/Decor/Background_Tiles/GrassWater7_Tile.png" id="3_o8po2"]
+[ext_resource type="Texture2D" uid="uid://c6o0t6t81h5gn" path="res://Sprite/Decor/Background_Tiles/GrassWater2_Tile.png" id="4_w7tbm"]
+[ext_resource type="Texture2D" uid="uid://bwvhx1l37h46y" path="res://Sprite/Decor/Background_Tiles/GrassWater3_Tile.png" id="5_072m2"]
 [ext_resource type="Texture2D" uid="uid://cvte06pq07p1c" path="res://Sprite/Road_01/Road_01_Tile_01/Layers/Road_Main.png" id="6_gk7mj"]
+[ext_resource type="Texture2D" uid="uid://baqorffsiwckc" path="res://Sprite/Decor/Background_Tiles/Water_Tile.png" id="6_tloop"]
+[ext_resource type="Texture2D" uid="uid://d18wmqpfk3up1" path="res://Sprite/Decor/Background_Tiles/GrassWater8_Tile.png" id="7_1lmit"]
 [ext_resource type="Texture2D" uid="uid://ilfcdh71blhc" path="res://Sprite/Road_01/Road_01_Tile_07/Layers/Road_Main.png" id="7_uxcg8"]
 [ext_resource type="Texture2D" uid="uid://b5c8ctflukl2a" path="res://Sprite/Road_01/MyRoads/Estrecho/CurvaEstrechaPequeña.png" id="8_lkwmq"]
 [ext_resource type="Texture2D" uid="uid://l5dcc26fguv8" path="res://Sprite/Road_01/MyRoads/Curva2.png" id="8_swmgh"]
@@ -12,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://de7hsoshn4q8l" path="res://Sprite/Road_01/Road_01_Tile_03/Layers/Road_Main.png" id="13_dvied"]
 [ext_resource type="Texture2D" uid="uid://ciot33nsrftch" path="res://Sprite/Road_01/Road_01_Tile_06/Layers/Road_Main.png" id="14_waor2"]
 [ext_resource type="Texture2D" uid="uid://nyhbu838mlay" path="res://Sprite/Road_01/Road_01_Tile_05/Road_01_Tile_05.png" id="15_gj3uv"]
+[ext_resource type="Script" path="res://Scripts/metaEtapa2.gd" id="16_vsmg3"]
 [ext_resource type="PackedScene" uid="uid://bmn4ql6tgu0eu" path="res://Scenes/LevelMaker/Elementos Fuera/Luces_Salida.tscn" id="17_trrlm"]
 [ext_resource type="Texture2D" uid="uid://b4i0ysirhhoho" path="res://Sprite/Road_01/Road_01_Tile_01/Road_01_Tile_01.png" id="18_hnnqk"]
 [ext_resource type="Script" path="res://Scripts/Asfalto.gd" id="18_kdr0m"]
@@ -21,6 +28,9 @@
 [ext_resource type="PackedScene" uid="uid://cwd505jeyooj7" path="res://Scenes/LevelMaker/Elementos Fuera/zona_publico_1.tscn" id="21_3sdqo"]
 [ext_resource type="PackedScene" uid="uid://dvtpw1h37fytx" path="res://Scenes/LevelMaker/Elementos Fuera/salida.tscn" id="21_siyjd"]
 [ext_resource type="PackedScene" uid="uid://l1f4isln8ofe" path="res://Scenes/LevelMaker/Elementos Fuera/meta.tscn" id="22_pgwat"]
+[ext_resource type="PackedScene" uid="uid://dt3qe1yrdps7m" path="res://Scenes/LevelMaker/Elementos Fuera/Roca.tscn" id="23_ka1ac"]
+[ext_resource type="PackedScene" uid="uid://ckxflgylxl8xi" path="res://Scenes/LevelMaker/Elementos Fuera/zona_publico_2.tscn" id="24_sy8dc"]
+[ext_resource type="PackedScene" uid="uid://kew887htlacc" path="res://Scenes/LevelMaker/Elementos Fuera/Casa1.tscn" id="25_12t34"]
 
 [node name="Stage2" type="Node2D"]
 
@@ -2159,6 +2169,54 @@ texture = ExtResource("1_bqy6n")
 position = Vector2(3310, -10998)
 texture = ExtResource("1_bqy6n")
 
+[node name="GrassWaterTile" type="Sprite2D" parent="Fondo"]
+position = Vector2(6299, -5573)
+texture = ExtResource("2_ihvjs")
+
+[node name="GrassWaterTile2" type="Sprite2D" parent="Fondo"]
+position = Vector2(5789, -5573)
+texture = ExtResource("2_ihvjs")
+
+[node name="GrassWater7Tile" type="Sprite2D" parent="Fondo"]
+position = Vector2(5279, -6085)
+texture = ExtResource("3_o8po2")
+
+[node name="GrassWater2Tile" type="Sprite2D" parent="Fondo"]
+position = Vector2(6810, -5573)
+texture = ExtResource("4_w7tbm")
+
+[node name="GrassWater3Tile" type="Sprite2D" parent="Fondo"]
+position = Vector2(6815, -6084)
+texture = ExtResource("5_072m2")
+
+[node name="WaterTile" type="Sprite2D" parent="Fondo"]
+position = Vector2(6303, -6085)
+texture = ExtResource("6_tloop")
+
+[node name="WaterTile2" type="Sprite2D" parent="Fondo"]
+position = Vector2(5791, -6085)
+texture = ExtResource("6_tloop")
+
+[node name="GrassWater7Tile2" type="Sprite2D" parent="Fondo"]
+position = Vector2(5279, -6598)
+texture = ExtResource("3_o8po2")
+
+[node name="GrassWater3Tile2" type="Sprite2D" parent="Fondo"]
+position = Vector2(6815, -6597)
+texture = ExtResource("5_072m2")
+
+[node name="WaterTile3" type="Sprite2D" parent="Fondo"]
+position = Vector2(6303, -6598)
+texture = ExtResource("6_tloop")
+
+[node name="WaterTile4" type="Sprite2D" parent="Fondo"]
+position = Vector2(5791, -6598)
+texture = ExtResource("6_tloop")
+
+[node name="GrassWater8Tile" type="Sprite2D" parent="Fondo"]
+position = Vector2(5277, -5575)
+texture = ExtResource("7_1lmit")
+
 [node name="GrassTile487" type="Sprite2D" parent="Fondo"]
 position = Vector2(3821, -10998)
 texture = ExtResource("1_bqy6n")
@@ -2734,6 +2792,7 @@ scale = Vector2(0.31, 0.31)
 [node name="Meta" parent="." instance=ExtResource("22_pgwat")]
 position = Vector2(-599, -8971)
 scale = Vector2(0.319998, 0.319998)
+script = ExtResource("16_vsmg3")
 
 [node name="Coche" parent="." instance=ExtResource("20_n3hef")]
 
@@ -2741,6 +2800,7 @@ scale = Vector2(0.319998, 0.319998)
 position = Vector2(461, -5)
 
 [node name="Hierba" type="Area2D" parent="."]
+visible = false
 script = ExtResource("18_kdr0m")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hierba"]
@@ -2805,6 +2865,66 @@ texture = ExtResource("19_2jdq3")
 
 [node name="Barreras24" type="Sprite2D" parent="ConjuntoBarreras"]
 position = Vector2(-170.896, -3154)
+rotation = 0.523598
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras55" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(-162.465, -3682.61)
+rotation = 0.523598
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras56" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(-162.465, -3682.61)
+rotation = 0.523598
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras57" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(-55.0777, -3620.61)
+rotation = 0.523598
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras58" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(52.3095, -3558.61)
+rotation = 0.523598
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras59" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(156.232, -3498.61)
+rotation = 0.523598
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras60" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(273.146, -3431.11)
+rotation = 0.523598
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras61" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(379.667, -3369.61)
+rotation = 0.523598
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras62" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(484.456, -3309.11)
+rotation = 0.523598
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras63" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(593.575, -3246.11)
+rotation = 0.523598
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras64" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(706.159, -3181.11)
+rotation = 0.523598
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras65" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(810.948, -3120.61)
+rotation = 0.523598
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras66" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(919.201, -3058.11)
 rotation = 0.523598
 texture = ExtResource("19_2jdq3")
 
@@ -2915,6 +3035,36 @@ position = Vector2(-1968.47, -8966.52)
 rotation = 0.523598
 texture = ExtResource("19_2jdq3")
 
+[node name="Barreras49" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(-3446.14, -8487.12)
+rotation = -0.261799
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras50" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(-3572.58, -8448.12)
+rotation = -0.261799
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras51" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(-3692.42, -8414.54)
+rotation = -0.261799
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras52" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(-3815.37, -8381.6)
+rotation = -0.261799
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras53" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(-3941.27, -8351.52)
+rotation = -0.261799
+texture = ExtResource("19_2jdq3")
+
+[node name="Barreras54" type="Sprite2D" parent="ConjuntoBarreras"]
+position = Vector2(-4080.47, -8316.42)
+rotation = -0.261799
+texture = ExtResource("19_2jdq3")
+
 [node name="Barreras44" type="Sprite2D" parent="ConjuntoBarreras"]
 position = Vector2(-1871.48, -8910.52)
 rotation = 0.523598
@@ -2945,6 +3095,10 @@ position = Vector2(4927, -3517)
 rotation = -0.523598
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-208.394, -3201.06, -214.001, -3167.34, 1003.83, -2452.68, 1025.83, -2490.79)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-29.076, -545.64)
 polygon = PackedVector2Array(-208.394, -3201.06, -226.662, -3165.41, 1003.83, -2452.68, 1025.83, -2490.79)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
@@ -2955,39 +3109,637 @@ polygon = PackedVector2Array(-208.394, -3201.06, -226.662, -3165.41, 1003.83, -2
 position = Vector2(-1759.97, -5789.65)
 polygon = PackedVector2Array(-208.394, -3201.06, -226.662, -3165.41, 1003.83, -2452.68, 1025.83, -2490.79)
 
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(29.5527, -7.18652)
+polygon = PackedVector2Array(-4191.08, -8324.85, -4170.91, -8257.78, -3380.91, -8484.1, -3396.72, -8526.72)
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-407.965, -25.3831, 59.9712, -13.873, 48.5332, 19.9377, -404.681, 16.9277)
 
-[node name="Arbol" parent="." instance=ExtResource("20_6wnqw")]
-position = Vector2(1834, -513)
+[node name="DecoracionJuego" type="Node2D" parent="."]
+position = Vector2(4927, -3517)
+rotation = -0.523598
 
-[node name="Arbol2" parent="." instance=ExtResource("20_6wnqw")]
-position = Vector2(1834, -513)
+[node name="Arbol" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4180.62, 1055.04)
+rotation = 0.523598
 
-[node name="ZonaPublico1" parent="." instance=ExtResource("21_3sdqo")]
-position = Vector2(1189, -479)
+[node name="Arbol2" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4180.62, 1055.04)
+rotation = 0.523598
 
-[node name="ZonaPublico2" parent="." instance=ExtResource("21_3sdqo")]
-position = Vector2(437, -479)
+[node name="ZonaPublico1" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-4756.2, 761.989)
+rotation = 0.523598
 
-[node name="ZonaPublico3" parent="." instance=ExtResource("21_3sdqo")]
-position = Vector2(-338, -479)
+[node name="ZonaPublico2" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-5407.45, 385.989)
+rotation = 0.523598
 
-[node name="ZonaPublico4" parent="." instance=ExtResource("21_3sdqo")]
-position = Vector2(-361, 446)
-rotation = -3.14159
+[node name="ZonaPublico3" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-6078.62, -1.51019)
+rotation = 0.523598
 
-[node name="ZonaPublico5" parent="." instance=ExtResource("21_3sdqo")]
-position = Vector2(391, 446)
-rotation = -3.14159
+[node name="ZonaPublico4" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-6561.04, 788.064)
+rotation = -2.61799
 
-[node name="ZonaPublico6" parent="." instance=ExtResource("21_3sdqo")]
-position = Vector2(1149, 446)
-rotation = -3.14159
+[node name="ZonaPublico5" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-5909.79, 1164.06)
+rotation = -2.61799
 
-[node name="Arbol3" parent="." instance=ExtResource("20_6wnqw")]
-position = Vector2(1794, 505)
+[node name="ZonaPublico6" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-5253.34, 1543.06)
+rotation = -2.61799
+
+[node name="Arbol3" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4724.26, 1916.66)
+rotation = -2.8798
+
+[node name="Arbol4" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3549.88, 160.575)
+rotation = 0.523598
+
+[node name="Arbol5" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2709.51, 267.018)
+rotation = 1.57079
+
+[node name="Arbol6" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1987.37, -67.7647)
+rotation = 1.57079
+
+[node name="Arbol7" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2535.3, -612.737)
+rotation = 3.40339
+
+[node name="Arbol8" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3055.6, -423.542)
+rotation = 3.40339
+
+[node name="Arbol9" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3428.71, -253.289)
+rotation = 3.40339
+
+[node name="ZonaPublico7" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-3027.35, 919.521)
+rotation = 2.09439
+
+[node name="Arbol10" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1468.93, 244.261)
+rotation = 3.66519
+
+[node name="Roca" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-1402.91, -460.093)
+rotation = 0.523598
+
+[node name="Roca2" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-1765.92, -719.332)
 rotation = 2.87979
+scale = Vector2(1, 1)
+
+[node name="Roca3" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-539.012, -66.4021)
+rotation = 1.83259
+scale = Vector2(1.14, 1.14)
+
+[node name="Arbol11" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-855.763, -297.775)
+rotation = -2.618
+
+[node name="Arbol12" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-983.517, 509.502)
+rotation = 2.87979
+scale = Vector2(1, 1)
+
+[node name="Arbol13" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-265.56, 751.964)
+rotation = 1.57079
+
+[node name="Arbol14" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(241.111, 588.384)
+rotation = 0.523598
+
+[node name="Arbol15" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(563.537, 157.926)
+rotation = 2.87979
+scale = Vector2(1, 1)
+
+[node name="Arbol16" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-468.045, -1129.32)
+rotation = 2.61799
+
+[node name="Arbol17" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-602.478, -688.477)
+rotation = -2.618
+
+[node name="Arbol18" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1113.86, -998.735)
+rotation = -2.618
+
+[node name="Arbol19" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-935.073, -1484.41)
+rotation = -1.5708
+
+[node name="Arbol20" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1598.2, -975.836)
+rotation = -1.5708
+
+[node name="Arbol21" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2135.74, -872.798)
+rotation = 0.523589
+
+[node name="Arbol22" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(110.562, -2155.5)
+rotation = 0.523589
+
+[node name="Arbol23" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-87.2627, -2882.86)
+rotation = 0.523589
+
+[node name="Arbol24" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-582.606, -2616.9)
+rotation = 2.09438
+
+[node name="Arbol25" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(535.86, -284.137)
+rotation = 0.523598
+
+[node name="Arbol26" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(105.758, -575.18)
+rotation = -1.309
+
+[node name="Roca4" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-616.489, -2194.21)
+rotation = 1.83259
+
+[node name="Roca5" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(516.017, -2095.77)
+rotation = 1.83259
+
+[node name="Roca6" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(1446.65, -2261.68)
+rotation = 2.35619
+
+[node name="Roca7" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(330.508, -1326.46)
+rotation = 2.35619
+
+[node name="Roca8" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(330.508, -1326.46)
+rotation = 2.35619
+
+[node name="Arbol27" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(948.2, -1854.33)
+rotation = 0.523598
+
+[node name="Arbol28" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(329.094, -1594.01)
+rotation = 2.61799
+
+[node name="Arbol29" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(1589.1, -2664.41)
+rotation = 2.61799
+
+[node name="Arbol30" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(1510.26, -1865.85)
+rotation = 0.785397
+
+[node name="Arbol31" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(1267.64, -3063.63)
+rotation = 0.785397
+
+[node name="Arbol32" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-821.15, -3419.73)
+rotation = -2.35619
+
+[node name="Arbol33" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-506.712, -4396.35)
+rotation = -2.35619
+
+[node name="Arbol97" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-19.2446, -4620.67)
+rotation = -2.35619
+
+[node name="Arbol98" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-322.283, -3975.79)
+rotation = -2.35619
+
+[node name="Arbol99" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(1450.72, -3732.73)
+rotation = -0.523598
+
+[node name="Arbol100" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-425.142, -5277.64)
+rotation = 0.261799
+
+[node name="Arbol34" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-723.266, -4789.27)
+rotation = -2.35619
+
+[node name="Arbol35" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2825.45, -4310.18)
+rotation = -2.35619
+
+[node name="Arbol36" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2182.23, -3830.27)
+rotation = -2.35619
+
+[node name="Arbol37" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2658.81, -3906.81)
+rotation = -2.35619
+
+[node name="Arbol38" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1196.75, -3805.17)
+rotation = -2.35619
+
+[node name="Arbol39" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1745.25, -3997.14)
+rotation = 0.261799
+
+[node name="Arbol40" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2002.8, -4655.06)
+rotation = 0.261799
+
+[node name="Arbol41" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1546.26, -4841.81)
+rotation = 1.83259
+
+[node name="Arbol42" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1667.14, -5216.44)
+rotation = 1.57079
+
+[node name="Roca9" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-1141.63, -4178.64)
+rotation = -1.5708
+
+[node name="Roca10" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-1106, -4854.36)
+rotation = -0.523598
+scale = Vector2(1.375, 1.375)
+
+[node name="ZonaPublico8" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-2789.71, -5428.08)
+rotation = 2.09439
+
+[node name="ZonaPublico9" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-2407.21, -6090.59)
+rotation = 2.09439
+
+[node name="ZonaPublico10" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-2013.72, -6772.15)
+rotation = 2.09439
+
+[node name="ZonaPublico11" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-1612.22, -7467.57)
+rotation = 2.09439
+
+[node name="ZonaPublico12" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-1251.72, -8091.97)
+rotation = 2.09439
+
+[node name="ZonaPublico13" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-1928.97, -8504.93)
+rotation = -1.0472
+
+[node name="ZonaPublico14" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-2289.47, -7880.52)
+rotation = -1.0472
+
+[node name="ZonaPublico15" parent="DecoracionJuego" instance=ExtResource("21_3sdqo")]
+position = Vector2(-2643.47, -7267.38)
+rotation = -1.0472
+
+[node name="Arbol43" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2963.28, -6783.45)
+rotation = 3.14159
+
+[node name="Arbol44" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3236.03, -6285.04)
+rotation = -1.0472
+
+[node name="Arbol45" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3521.01, -5851.44)
+rotation = -1.0472
+
+[node name="Arbol46" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3822.21, -5423.74)
+rotation = -2.618
+
+[node name="Arbol47" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3686.44, -6304.91)
+rotation = -2.618
+
+[node name="Roca11" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-3930.94, -5963.41)
+rotation = 1.57079
+
+[node name="Roca12" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-5032.56, -7539.36)
+rotation = 2.87979
+scale = Vector2(1, 1)
+
+[node name="Roca13" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-5032.56, -7539.36)
+rotation = 2.87979
+scale = Vector2(1, 1)
+
+[node name="Arbol48" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4693.59, -7506.47)
+rotation = 0.523598
+
+[node name="Arbol49" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-5153.95, -6853.11)
+rotation = 2.09439
+
+[node name="Arbol50" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-5745.52, -7148.47)
+rotation = 2.35619
+
+[node name="Roca16" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-3922.82, -9293.49)
+
+[node name="Arbol51" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-5830.65, -7641.02)
+rotation = 1.83259
+
+[node name="Arbol52" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-5542.01, -8060.96)
+rotation = 1.0472
+
+[node name="Arbol53" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4123.08, -7606.63)
+rotation = 1.0472
+
+[node name="Arbol54" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4071.52, -7151.93)
+rotation = 0.261799
+
+[node name="Arbol55" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3585.06, -7762.5)
+rotation = 0.261799
+
+[node name="Arbol56" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3488.22, -7226.24)
+rotation = 0.261799
+
+[node name="Arbol57" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3044.12, -7459.43)
+rotation = -2.09439
+
+[node name="Arbol58" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2744.01, -8339.25)
+rotation = -2.09439
+
+[node name="Arbol59" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3845.84, -9030.81)
+rotation = -2.09439
+
+[node name="Arbol60" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3396.07, -9089.84)
+rotation = -2.87979
+
+[node name="Arbol61" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2951.7, -8939.51)
+rotation = 2.618
+
+[node name="Arbol62" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2344.3, -8967.57)
+rotation = 2.618
+
+[node name="Arbol63" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3047.58, -7909.45)
+rotation = 1.57079
+
+[node name="Arbol64" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4627.66, -6462.66)
+rotation = 2.87979
+scale = Vector2(1, 1)
+
+[node name="Arbol65" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4646.42, -5844.17)
+rotation = 2.87979
+scale = Vector2(1, 1)
+
+[node name="Arbol66" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4723.91, -5433.96)
+rotation = -0.523607
+
+[node name="Arbol67" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4563.75, -4937.35)
+rotation = 1.30899
+
+[node name="Arbol68" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4093.27, -4662.25)
+rotation = -2.87981
+
+[node name="Arbol69" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3571.41, -4504.14)
+rotation = -2.87981
+
+[node name="Roca14" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-3247.06, -4697.93)
+rotation = -1.57079
+
+[node name="Roca15" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-3066, -4997.54)
+rotation = -0.261799
+scale = Vector2(1, 1)
+
+[node name="Roca19" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-4749.48, -8269.66)
+rotation = 1.83259
+
+[node name="Arbol70" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2808.27, -4797.93)
+rotation = -2.35619
+scale = Vector2(1, 1)
+
+[node name="Arbol71" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4141.4, -10010.9)
+rotation = 0.523598
+
+[node name="Roca17" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-3033.38, -9482.04)
+rotation = -2.09439
+
+[node name="Roca22" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-2768.06, -9289.59)
+scale = Vector2(1.275, 1.275)
+
+[node name="Roca21" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-3441.27, -9441.56)
+rotation = -0.261799
+scale = Vector2(1, 1)
+
+[node name="Roca18" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-1989.53, -9586.05)
+rotation = -2.61799
+
+[node name="Roca23" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-371.256, -9496.98)
+rotation = -2.61799
+
+[node name="Roca24" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-485.827, -7304.53)
+rotation = 2.0944
+
+[node name="Arbol72" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2980.9, -10236.9)
+rotation = 0.523598
+
+[node name="ZonaPublico16" parent="DecoracionJuego" instance=ExtResource("24_sy8dc")]
+position = Vector2(-2398.79, -9933.19)
+rotation = 0.523598
+
+[node name="Arbol73" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4529.94, -8881.92)
+rotation = 0.523598
+
+[node name="Arbol74" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4562.32, -9745.85)
+rotation = 0.523598
+
+[node name="Arbol75" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4407.49, -8414)
+rotation = 0.523598
+
+[node name="Arbol76" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-5083.04, -8235.92)
+rotation = -1.309
+
+[node name="Roca20" parent="DecoracionJuego" instance=ExtResource("23_ka1ac")]
+position = Vector2(-4597.8, -9326.39)
+rotation = 1.57079
+
+[node name="Arbol77" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1515.36, -9581.33)
+rotation = 2.09439
+
+[node name="Arbol78" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-524.026, -9116.37)
+rotation = -2.3562
+
+[node name="Arbol79" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-183.755, -8679.74)
+rotation = -1.0472
+
+[node name="Arbol80" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(73.4902, -8121.3)
+rotation = 0.523589
+
+[node name="Arbol81" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-737.455, -7508.7)
+rotation = 0.523589
+
+[node name="Arbol82" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-858.95, -7940.27)
+rotation = 1.83258
+
+[node name="Arbol83" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1226.77, -7455.18)
+rotation = 1.83258
+
+[node name="Arbol84" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-930.957, -7061.54)
+rotation = 2.61798
+
+[node name="Arbol85" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1220.35, -6696.3)
+rotation = 2.61798
+
+[node name="Arbol86" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1570.93, -5931.08)
+rotation = 2.61798
+
+[node name="Arbol87" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-667.728, -5841.47)
+rotation = 2.61798
+
+[node name="Arbol88" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-279.783, -6445.41)
+rotation = -2.35621
+scale = Vector2(1, 1)
+
+[node name="Arbol89" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(156.857, -6703.69)
+rotation = -0.785415
+
+[node name="Arbol90" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(290.042, -7198.38)
+rotation = -0.785415
+
+[node name="Arbol91" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(797.714, -7057.69)
+rotation = -0.785415
+
+[node name="Arbol92" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(649.268, -7592.58)
+rotation = -1.88155
+
+[node name="Arbol93" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(222.948, -7730.17)
+rotation = -1.88155
+
+[node name="Arbol94" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1409.1, -6313.38)
+rotation = -1.88155
+
+[node name="Arbol95" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2023.39, -5797.39)
+rotation = -1.88155
+
+[node name="Arbol96" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2408.6, -5418.19)
+rotation = -0.785415
+
+[node name="Arbol101" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-948.555, -5477.06)
+rotation = -0.785415
+
+[node name="Arbol102" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(379.354, -8537.07)
+rotation = 0.523589
+
+[node name="Arbol103" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(17.3027, -9207.98)
+rotation = 0.523589
+
+[node name="Arbol104" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1216.33, -10077.3)
+rotation = 0.523589
+
+[node name="Arbol105" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-1800.04, -10078.2)
+rotation = 0.523589
+
+[node name="Arbol106" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-2330.07, -10436.2)
+rotation = 2.87978
+
+[node name="Arbol107" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3760.5, -10564.6)
+rotation = -2.09441
+
+[node name="Arbol108" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-3148.67, -10778.4)
+rotation = -1.04721
+
+[node name="ZonaPublico17" parent="DecoracionJuego" instance=ExtResource("24_sy8dc")]
+position = Vector2(-3566.08, -10131.4)
+rotation = -0.261799
+scale = Vector2(1, 1)
+
+[node name="Arbol109" parent="DecoracionJuego" instance=ExtResource("20_6wnqw")]
+position = Vector2(-4163.22, 2190.92)
+rotation = 2.61799
+
+[node name="ZonaPublico18" parent="DecoracionJuego" instance=ExtResource("25_12t34")]
+position = Vector2(-3161.3, 1531.54)
+rotation = -1.0472
+
+[node name="ZonaPublico19" parent="DecoracionJuego" instance=ExtResource("24_sy8dc")]
+position = Vector2(-3570.42, 1988.15)
+rotation = 2.35619
 
 [connection signal="body_entered" from="Hierba" to="Hierba" method="_on_body_entered"]
 [connection signal="body_exited" from="Hierba" to="Hierba" method="_on_body_exited"]

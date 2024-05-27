@@ -170,9 +170,15 @@ func empiezaEtapa():
 func vuelta_rapida():
 	Global.tiempo_actual += get_process_delta_time()
 	
-func finalEtapa():
+func finalEtapa1():
 	vuelta = false 
 	get_tree().change_scene_to_file("res://Scenes/Rally1/Stage2/stage_2.tscn")
+func finalEtapa2():
+	vuelta = false 
+	get_tree().change_scene_to_file("res://Scenes/Rally1/Stage3/stage_3.tscn")
+func finalEtapa3():
+	vuelta = false 
+	get_tree().change_scene_to_file("res://Scenes/Marcador/menu_marcador.tscn")
 func penalizacion():
 	Global.tiempo_actual += 5
 
