@@ -3120,17 +3120,14 @@ rotation = -0.261812
 [node name="Arbol63" parent="DecoracionExterior" instance=ExtResource("23_2413q")]
 position = Vector2(4570.93, -10883)
 rotation = 0.785384
-scale = Vector2(1, 1)
 
 [node name="Arbol64" parent="DecoracionExterior" instance=ExtResource("23_2413q")]
 position = Vector2(8458.92, -12248.1)
 rotation = 0.785384
-scale = Vector2(1, 1)
 
 [node name="Arbol65" parent="DecoracionExterior" instance=ExtResource("23_2413q")]
 position = Vector2(8458.92, -12248.1)
 rotation = 0.785384
-scale = Vector2(1, 1)
 
 [node name="Roca20" parent="DecoracionExterior" instance=ExtResource("25_yej5o")]
 position = Vector2(3875.92, -12319)
@@ -3163,7 +3160,6 @@ rotation = -1.57081
 [node name="Arbol70" parent="DecoracionExterior" instance=ExtResource("23_2413q")]
 position = Vector2(9036.95, -8726.06)
 rotation = -0.523611
-scale = Vector2(1, 1)
 
 [node name="ZonaPublico26" parent="DecoracionExterior" instance=ExtResource("30_n31w7")]
 position = Vector2(4151.96, -5919.03)

@@ -2698,17 +2698,14 @@ rotation = 2.35619
 [node name="ZonaPublico19" parent="Publico" instance=ExtResource("27_5sgfx")]
 position = Vector2(-8334.65, -3571.63)
 rotation = 1.83259
-scale = Vector2(1, 1)
 
 [node name="ZonaPublico20" parent="Publico" instance=ExtResource("27_5sgfx")]
 position = Vector2(-8362.94, -3119.09)
 rotation = 1.309
-scale = Vector2(1, 1)
 
 [node name="ZonaPublico21" parent="Publico" instance=ExtResource("27_5sgfx")]
 position = Vector2(-8362.94, -3119.09)
 rotation = 1.309
-scale = Vector2(1, 1)
 
 [node name="ZonaPublico22" parent="Publico" instance=ExtResource("27_5sgfx")]
 position = Vector2(-8541.85, -813.211)
