@@ -51,6 +51,7 @@ scale = Vector2(0.255859, 0.255859)
 texture = ExtResource("4_ktb8u")
 
 [node name="Recta" type="Sprite2D" parent="CanvasLayer"]
+visible = false
 position = Vector2(573, 73)
 scale = Vector2(0.144444, 0.144444)
 texture = ExtResource("5_fxj6p")

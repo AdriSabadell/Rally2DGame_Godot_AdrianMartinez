@@ -18,11 +18,12 @@ func _process(delta):
 		empieza_cuenta = false
 		$RedLight.visible = false
 		Global.salida_correcta = true
+
 	
 func _on_body_entered(body):
-	if body.is_in_group("Player") and tiempo_salida < 4:
+	if body.is_in_group("Player") and tiempo_salida < 4 and Global.salida_correcta == false:
 		body.penalizacion()
 		body.empiezaEtapa()
 		
-	if body.is_in_group("Player") and tiempo_salida > 4:
-		body.empiezaEtapa()
+	"""if body.is_in_group("Player") and tiempo_salida > 4:
+		body.empiezaEtapa()"""

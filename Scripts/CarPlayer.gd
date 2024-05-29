@@ -41,6 +41,8 @@ func _physics_process(delta):
 	calculate_steering(delta)
 	velocity += acceleration * delta
 	move_and_slide()
+	if Global.salida_correcta == true:
+		empiezaEtapa()
 	
 func apply_friction(delta):
 	if acceleration == Vector2.ZERO and velocity.length() < 50:
@@ -172,6 +174,7 @@ func vuelta_rapida():
 	
 func finalEtapa1():
 	vuelta = false 
+	Global.salida_correcta = false
 	get_tree().change_scene_to_file("res://Scenes/Rally1/Stage2/stage_2.tscn")
 func finalEtapa2():
 	vuelta = false 
