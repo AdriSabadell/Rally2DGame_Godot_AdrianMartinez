@@ -14,6 +14,8 @@ offset_bottom = 40.0
 script = ExtResource("1_dxicl")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+scale = Vector2(1.68, 1.68)
+transform = Transform2D(1.68, 0, 0, 1.68, 0, 0)
 
 [node name="Node2D" type="Node2D" parent="Control/CanvasLayer"]
 

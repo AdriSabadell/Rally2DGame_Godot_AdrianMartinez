@@ -24,30 +24,30 @@ script = ExtResource("1_be3sm")
 layer = 5
 
 [node name="Tiempo Etapa" type="Label" parent="CanvasLayer"]
-offset_left = 809.0
+offset_left = 1523.0
 offset_top = 2.0
-offset_right = 1200.0
+offset_right = 1914.0
 offset_bottom = 263.0
-theme_override_font_sizes/font_size = 86
+theme_override_font_sizes/font_size = 126
 text = "0
 "
 horizontal_alignment = 1
 
 [node name="Mecanico" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(1047, 562)
-scale = Vector2(0.255859, 0.255859)
+position = Vector2(1791, 951)
+scale = Vector2(0.366, 0.366)
 texture = ExtResource("2_dm3vh")
 
 [node name="Mecanico2" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-position = Vector2(1047, 562)
-scale = Vector2(0.255859, 0.255859)
+position = Vector2(1791, 951)
+scale = Vector2(0.366, 0.366)
 texture = ExtResource("3_jt738")
 
 [node name="Mecanico3" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-position = Vector2(1047, 562)
-scale = Vector2(0.255859, 0.255859)
+position = Vector2(1791, 951)
+scale = Vector2(0.366, 0.366)
 texture = ExtResource("4_ktb8u")
 
 [node name="Recta" type="Sprite2D" parent="CanvasLayer"]
@@ -97,7 +97,7 @@ rotation = 1.5708
 texture = ExtResource("1_3rpsu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.61, 0.61)
+zoom = Vector2(0.745, 0.745)
 
 [node name="Detector" type="CollisionShape2D" parent="."]
 position = Vector2(68, 0)
